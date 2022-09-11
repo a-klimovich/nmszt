@@ -35,8 +35,8 @@
       border-radius: 5px;
 
       @include hover {
-        background-color: $orange;
-        border-color: $orange;
+        background-color: $blue;
+        border-color: $blue;
         color: $white !important;
         transition: all 0.3s;
       }

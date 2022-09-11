@@ -27,14 +27,14 @@
     }
 
     &.active {
-      border-color: $orange;
+      border-color: $blue;
 
       svg {
         transform: rotate(-90deg);
       }
 
       svg path {
-        fill: $orange;
+        fill: $blue;
       }
     }
 
@@ -79,7 +79,7 @@
 
     &__answer {
       padding-top: 10px;
-      color: $orange;
+      color: $blue;
     }
 
     @include md {

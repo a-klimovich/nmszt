@@ -43,7 +43,7 @@ a {
   color: $gray-2;
 
   @include hover {
-    color: $orange;
+    color: $blue;
   }
 }
 
@@ -86,8 +86,8 @@ hr {
   color: $gray-2;
 
   @include hover {
-    background-color: $orange;
-    border-color: $orange;
+    background-color: $blue;
+    border-color: $blue;
     color: $white;
   }
 }
@@ -103,7 +103,7 @@ hr {
   appearance: none;
   border: none;
   border-radius: 0;
-  background-color: #fff;
+  background-color: $white;
   outline: none;
 
   &::-webkit-search-decoration,

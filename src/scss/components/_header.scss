@@ -61,7 +61,7 @@
             position: absolute;
             bottom: -2px;
             height: 3px;
-            background: $orange;
+            background: $blue;
             width: 100%;
           }
         }
@@ -86,7 +86,7 @@
       background: $white;
       width: 100%;
       z-index: 9;
-      border-bottom: 4px solid $orange;
+      border-bottom: 4px solid $blue;
 
       @include rwd(1220) {
         min-width: 320px;
@@ -107,7 +107,7 @@
         font-size: 22px;
 
         &:hover {
-          color: $orange;
+          color: $blue;
         }
       }
     }
@@ -123,7 +123,7 @@
         border: 1px solid transparent;
 
         @include hover {
-          border: 1px solid $orange;
+          border: 1px solid $blue;
         }
 
         a {
@@ -219,7 +219,7 @@
         padding: 15px;
 
         &:hover {
-          color: $orange;
+          color: $blue;
         }
       }
     }

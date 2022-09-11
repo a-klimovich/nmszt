@@ -39,13 +39,13 @@
   }
 
   a.active {
-    color: $orange;
-    border-color: $orange;
+    color: $blue;
+    border-color: $blue;
   }
 
   & a:hover:not(.active) {
-    color: $orange;
-    border-color: $orange;
+    color: $blue;
+    border-color: $blue;
   }
   
   &__next, &__prev {
@@ -62,7 +62,7 @@
 
     &:hover {
       svg path {
-        fill: $orange;
+        fill: $blue;
       }
     }
   }

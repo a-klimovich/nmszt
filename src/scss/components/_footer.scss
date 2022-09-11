@@ -37,12 +37,12 @@
 
           @include hover {
             svg circle {
-              fill: $orange;
+              fill: $blue;
             }
 
             .youTube {
               path {
-                fill: $orange;
+                fill: $blue;
               }
             }
           }
@@ -119,7 +119,7 @@
       li a {
         font-size: 18px;
         line-height: 22px;
-        color: $orange;
+        color: $blue;
 
         @include hover {
           color: $white;
@@ -174,7 +174,7 @@
             margin-bottom: 0;
           }
           @include hover {
-            background-color: $orange;
+            background-color: $blue;
             color: $white;
           }
 
@@ -227,7 +227,7 @@
             font-size: 18px;
             line-height: 27px;
             max-width: 268px;
-            color: $orange;
+            color: $blue;
           }
         }
       }
