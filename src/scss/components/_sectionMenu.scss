@@ -24,7 +24,7 @@
     margin-right: 2px;
 
     &.active {
-      border-bottom-color: #F2994A;
+      border-bottom-color: #007DB6;
     }
     
     &:first-child {
@@ -34,7 +34,7 @@
     }
 
     @include hover {
-      border-bottom-color: #F2994A;
+      border-bottom-color: #007DB6;
     }
     
     @include without-last {
