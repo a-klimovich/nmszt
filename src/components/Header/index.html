@@ -10,6 +10,7 @@
       </a>
     </div>
   
+    
     <div class="menu-wrapper">
       <nav class="nav" id="headerNav">
         <ul class="nav__list list-reset">
@@ -61,42 +62,6 @@
           </li>
         </ul>
       </nav>
-  
-      <div class="short-info">
-        <div class="short-info-wrapper">
-          @@include('./base/Short-info-item.html', {
-            'image': './assets/home_icon_performance.svg',
-            'title': 'Производительность',
-            'subtitle': '45 тонн сыра в сутки',
-          })
-          @@include('./base/Short-info-item.html', {
-            'image': './assets/home_icon_wide-selection.svg',
-            'title': 'Широкий выбор',
-            'subtitle': '150 наименований',
-          })
-          @@include('./base/Short-info-item.html', {
-            'image': './assets/home_icon_export.svg',
-            'title': 'Экспорт',
-            'subtitle': '90% продукции',
-          })
-        </div>
-
-        <ul class="language list-reset">
-          <li><a href="#"><img src="./assets/lang-ru.png" alt="lang-ru"></a></li>
-          <li><a href="#"><img src="./assets/lang-ch.png" alt="lang-ch"></a></li>
-          <li><a href="#"><img src="./assets/lang-en.png" alt="lang-en"></a></li>
-        </ul>
-  
-        <a href="#" class="link-action download-prices">
-          @@include('../../assets/download-icon.svg')
-          <span>СКАЧАТЬ ПРАЙС</span>
-        </a>
-  
-        <a href="#" class="link-action connect-with-us">
-          @@include('../../assets/email-icon.svg')
-          <span>НАПИШИТЕ НАМ</span>
-        </a>
-      </div>
     </div>
   
     <div class="lang-search-wrapper">
@@ -105,15 +70,6 @@
         <li><a href="#"><img src="./assets/lang-ch.png" alt="lang-ch"></a></li>
         <li><a href="#"><img src="./assets/lang-en.png" alt="lang-en"></a></li>
       </ul>
-  
-      <form action="#" class="form">
-        <label class="form__label js-focus-visible">
-          <input type="text" name="поиск" class="input-reset form__input" placeholder="поиск">
-          <button type="button" class="btn-reset form__btn">
-            @@include('../../assets/search-icon.svg')
-          </button>
-        </label>
-      </form>
     </div>
 
     <button class="btn-reset submenu-header">

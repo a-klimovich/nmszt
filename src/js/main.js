@@ -10,7 +10,6 @@
     const $headerNav = $("#headerNav");
     const $burger = $(".burger");
     const $submenuHeaderBtn = $(".submenu-header");
-    const $shortInfo = $(".short-info");
 
     // Header on scroll
     function scrollFunction() {
@@ -27,9 +26,6 @@
 
     // Header menu controllers
     $burger.on("click", () => {
-      if ($shortInfo.hasClass(cssClassOpen)) {
-        $shortInfo.toggleClass(cssClassOpen);
-      }
       $burger.toggleClass("burger__active");
       $searchInput.toggleClass('active');
       $logoImage.toggleClass('is-hidden');
@@ -45,7 +41,6 @@
         $headerNav.toggleClass(cssClassOpen);
       }
       $searchInput.toggleClass('active');
-      $shortInfo.toggleClass(cssClassOpen);
       $logoImage.toggleClass('is-hidden');
     });
 
@@ -81,74 +76,6 @@
 
       $counterNode[0].innerHTML = `${listLength}`;
     })
-
-    // SECTION VIEW CONTROLER
-    const plantScheam = $('.about-plant__scheam');
-    const linesElem = $('.scheam__lines .line')
-    const $aboutPlantContentTitle = $('.about-plant__content .title')
-    const $aboutPlantContentText = $('.about-plant__content .text')
-    const $aboutPlantContentLinkHref = $('.about-plant__content .btn-learn-more')
-
-    const scheamContetn = [
-      {
-        title: 'О ЗАВОДЕ',
-        text: 'Работаем с 1939 <br><br> Открытое акционерное общество «Кобринский маслодельно-сыродельный завод» это предприятие с 80-летним опытом работы и уникальными традициями производства. Мы с гордостью можем вспомнить каждый год работы завода. Нам есть, о чем рассказать и чем гордиться!',
-        href: '#',
-      },
-      {
-        title: 'ПРОИЗВОДСТВО',
-        text: 'Работаем с 1939 <br><br> Открытое акционерное общество',
-        href: '#',
-      },
-      {
-        title: 'МИССИЯ',
-        text: 'Работаем с 1939 <br><br> Открытое акционерное общество «Кобринский маслодельно-сыродельный завод»',
-        href: '#',
-      },
-      {
-        title: 'ПОЛИТИКА',
-        text: 'Работаем с 1939 <br><br> <b> Открытое акционерное общество «Кобринский</b> маслодельно-сыродельный завод»',
-        href: '#',
-      },
-    ];
-
-    $aboutPlantContentTitle.html(scheamContetn[0].title);
-    $aboutPlantContentText.html(scheamContetn[0].text);
-    $aboutPlantContentLinkHref.attr('href', scheamContetn[0].href)
- 
-    linesElem.each((idx, element) => {
-      $(element).on('click', () => {
-        plantScheam.removeClass()
-        plantScheam.addClass(`about-plant__scheam active-section-${idx + 1}`);
-        // content
-        $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        $aboutPlantContentText.html(scheamContetn[idx].text);
-        $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href);
-
-        // switch (idx) {
-        //   case 0:
-            
-        //     break;
-        //   case 1:
-        //     $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        //     $aboutPlantContentText.html(scheamContetn[idx].text);
-        //     $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href)
-        //     break;
-        //   case 2:
-        //     $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        //     $aboutPlantContentText.html(scheamContetn[idx].text);
-        //     $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href)
-        //     break;
-        //   case 3:
-        //     $aboutPlantContentTitle.html(scheamContetn[idx].title);
-        //     $aboutPlantContentText.html(scheamContetn[idx].text);
-        //     $aboutPlantContentLinkHref.attr('href', scheamContetn[idx].href)
-        //     break;
-        //   default:
-        //     break;
-        // }
-      })
-    });
 
     // SLIDERS
     $("#mainSlider").slick({
