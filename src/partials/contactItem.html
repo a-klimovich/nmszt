@@ -1,0 +1,37 @@
+<div class="contact-card card">
+  <div class="contact-card__job-title">
+    @@title
+  </div>
+  
+  <hr>
+
+  <div class="contact-card__name">
+    @@if (name === 'typeNode') {
+      @@typeNode
+    }
+    @@if (name === 'number') {
+      <a href="tel:+@@number.telLink">@@number.telView</a>
+    }
+    @@if (name === 'numbers') {
+      <a href="tel:+@@numbersFirst.telLink">@@numbersFirst.telView</a>
+      <a href="tel:+@@numbersSecond.telLink">@@numbersSecond.telView</a>
+    }
+  </div>
+
+  <hr>
+
+  <div class="contact-card__contact">
+    @@if (contact === 'number') {
+      <a href="tel:@@contactNumber.phoneLink">@@contactNumber.phoneView</a>
+    }
+
+    @@if (contact === 'email') {
+      <a href="mailto:@@contactEmail.emailLink">@@contactEmail.emailView</a>
+    }
+
+    @@if (contact === 'mixed') {
+      <a href="mailto:@@contactNumber.phoneLink">@@contactNumber.phoneView</a>
+      <a href="mailto:@@contactEmail.emailLink">@@contactEmail.emailView</a>
+    }
+  </div>
+</div>

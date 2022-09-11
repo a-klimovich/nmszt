@@ -1,0 +1,48 @@
+.arrow-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 13px;
+  padding-bottom: 26px;
+  font-size: 18px;
+  line-height: 21px;
+
+  @include md {
+    padding-top: 55px;
+    padding-bottom: 65px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .arrow-text {
+    margin: 0 8px;
+    
+    @include md {
+      margin-bottom: 0;
+    }
+  }
+
+  .arrow-left,.arrow-right {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &:hover {
+      cursor: pointer;
+      
+      svg path {
+        fill: $orange;
+      }
+    }
+  }
+
+  .icon-arrow-left,.icon-arrow-right {
+    align-items: center;
+    display: flex;
+  }
+
+  .icon-arrow-left {
+    transform: rotate(180deg);
+  }
+}

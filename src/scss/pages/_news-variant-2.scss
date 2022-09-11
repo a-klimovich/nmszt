@@ -1,0 +1,17 @@
+.news-variant-page {
+  .news-variant {
+    &__imgs {
+      padding: 19px 0 23px;
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 49%;
+      }
+      
+      &quote {
+        display: flex;
+      }
+
+    }
+  }
+}

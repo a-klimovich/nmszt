@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+
+  <body class="page__body">
+    <div class="main-wrapper news-variant-page">
+      @@include('../components/Header/index.html')
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/news.jpg',
+        'title': 'НОВОСТИ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <main class="main">
+        <div class="container container--xl">
+          <div class="news-variant">
+            @@include('../components/NewsTitleAndDate/index.html', {
+              'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
+              'date': 'Июнь 28, 2019'
+            })
+            <p class="news-variant__text news-variant__text-before">
+              Кобринский маслодельно-сыродельный завод стал обладателем
+              наивысшей награды – Гран-При за стабильное качество продукции!<br /><br />
+              9 ноября состоялась церемония награждения Победителей Конкурса
+              «ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», по результатам которого предприятие
+              было удостоено Дипломами победителя в следующих номинациях:<br /><br />
+              "Мороженое" за "Пломбир на сливках" в вафельном стакане, 12%<br /><br />
+              "Сыры сычужные" за сыры "Арамель с пажитником" 50% и "МонБлан.
+              Старый Утес" 50%<br /><br />
+              "Масло сливочное" за масло сладкосливочное несоленое 82,5%<br /><br />
+              "Майонез" за "Провансаль кобринский" 51%.
+            </p>
+            <img
+              src="./assets/img/news-variant-2.jpg"
+              alt="image: cheese"
+              class="news-variant__img-market"
+            />
+            <p class="news-variant__text news-variant__text-after">
+              Кобринский маслодельно-сыродельнйы завод стал обладателем
+              наивысшей награды – Гран-При за стабильное качество продукции!<br /><br />
+              9 ноября состоялась церемония награждения Победителей Конкурса
+              «ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», по результатам которого предприятие
+              было удостоено Дипломами победителя в следующих номинациях:
+            </p>
+
+            @@include('../components/Blockquote/index.html', {
+              'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции! 9 ноября состоялась церемония награждения Победителей Конкурса «ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», по результатам которого предприятие было удостоено Дипломами победителя в следующих номинациях:',
+              'name': 'Сыродел Пивоваров'
+            })
+        
+            <div class="news-variant__imgs">
+              <img
+              src="./assets/img/news-variant-2.jpg"
+              alt="image: cheese"
+              class="news-variant__img-market"
+            />
+            <img
+              src="./assets/img/news-variant-2.jpg"
+              alt="image: cheese"
+              class="news-variant__img-market"
+            />
+            </div>
+          </div>
+        </div>
+
+        <div class="fluid-wrapper bg-gray-6">
+          <div class="container container--xl">
+            @@include('../components/SocialBar/index.html')
+          </div>
+        </div>
+        <div class="container container--xl">
+          @@include('../components/ArrowNews/index.html')
+        </div>
+      </main>
+
+      @@include('../components/Footer/index.html')
+    </div>
+  </body>
+  @@include('../utils/includes.html')
+  
+</html>

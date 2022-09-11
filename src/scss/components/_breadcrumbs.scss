@@ -1,0 +1,48 @@
+.breadcrumbs {
+  background-color: $gray-6;
+  min-height: 8px;
+  
+  a {
+    color: $gray-2;
+  }
+
+  &__list {
+    display: none;
+    padding: 25px 0;
+    list-style: none;
+
+    @include md {
+      display: flex;
+    }
+  }
+
+  &__item {
+    @include pr(35px);
+    position: relative;
+
+    a {
+      font-size: 22px;
+
+      @include hover {
+        color: $orange;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translate(0, -40%);
+    }
+  }
+
+  &__item.current {
+    a {
+      color: $orange;
+      font-weight: 700;
+    }
+    .arrow {
+      display: none;
+    }
+  }
+}

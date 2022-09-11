@@ -1,0 +1,48 @@
+/* stylelint-disable */
+
+@mixin submenu-header {
+  --dots-width: 5px;
+  --dots-height: 5px;
+  --dots-line-height: 5px;
+
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  color: #333333;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: var(--dots-width);
+    height: var(--dots-height);
+    border-radius: 50%;
+    background-color: currentColor;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - var(--dots-line-height));
+  }
+
+  &__dots {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--dots-width);
+    height: var(--dots-height);
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+  }
+}

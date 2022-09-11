@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+  @@include('../utils/headMapBox.html')
+
+<body class="page__body">
+  <div class="main-wrapper contacts-page">
+    @@include('../components/Header/index.html')
+    @@include('../components/HeaderTitle/index.html', { 
+      'image': './assets/img/header-img-3.jpg',
+      'title': 'КОНТАКТЫ'
+    })
+    <main class="main">
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="contacts-page-wrapper">
+
+        <div id="contactsMap" class="contacts-page__map"></div>
+
+        <section class="department-contacts">
+          <p class="department-contacts__title centered">Руководящий состав</p>
+
+          <div class="department-contacts__grid">
+            @@loop('../partials/contactItem.html', [
+              {
+                "title": "Директор",
+                "name": "typeNode",
+                "typeNode": '<strong>Чиботарь Руслан Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "+375164222321",
+                  "phoneView": "+375 1642 2-23-21",
+                },
+              },
+              {
+                "title": "Приемная",
+                "name": "typeNode",
+                "typeNode": '<p>тел/факс  (+375 1642) 2-23-21</p>',
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "sec@kobrincheese.com",
+                  "emailView": " sec@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Первый заместитель директора",
+                "name": "typeNode",
+                "typeNode": '<strong>Токарь Николай Николаевич</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164222721",
+                  "phoneView": "+375 1642 2-27-21",
+                },
+              },
+              {
+                "title": "Главный инженер",
+                "name": "typeNode",
+                "typeNode": '<strong>Грень Эдуард Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164221147",
+                  "phoneView": "+375 1642 2-11-47",
+                },
+              },
+              {
+                "title": "Заместитель главного инженера",
+                "name": "typeNode",
+                "typeNode": '<strong>Зановский Дмитрий Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164227300",
+                  "phoneView": "+375 1642 2-73-00",
+                },
+              },
+              {
+                "title": "Главный бухгалтер",
+                "name": "typeNode",
+                "typeNode": '<strong>Новик Елена Владимировна</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164241679",
+                  "phoneView": "+375 1642 4-16-79",
+                },
+              },
+              {
+                "title": "Ведущий экономист",
+                "name": "typeNode",
+                "typeNode": '<strong>Кицененко Светлана Евгеньевна</strong>',
+                "contact": 'mixed',
+                "contactNumber": {
+                  "phoneLink": "375164225653",
+                  "phoneView": "+375 1642 2-56-53",
+                },
+                "contactEmail": {
+                  "emailLink": "ekonomist@kobrincheese.com",
+                  "emailView": "ekonomist@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Бухгалтерия",
+                "name": "numbers",
+                "numbersFirst": {
+                  "telLink": '375164222293',
+                  "telView": '+375 1642 2-22-93',
+                },
+                "numbersSecond": {
+                  "telLink": '375164222951',
+                  "telView": '+375 1642 2-29-51',
+                },
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "zambuh@kobrincheese.com",
+                  "emailView": " zambuh@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Главный технолог",
+                "name": "typeNode",
+                "typeNode": '<strong>Кузьменя Снежана Николаевна</strong>',
+                "contact": 'mixed',
+                "contactNumber": {
+                  "phoneLink": "375164222604",
+                  "phoneView": "+375 1642 2-26-04",
+                },
+                "contactEmail": {
+                  "emailLink": "teh@kobrincheese.com",
+                  "emailView": "teh@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Отдел главного технолога",
+                "name": "typeNode",
+                "typeNode": '',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164240739",
+                  "phoneView": "+375 1642 4-07-39",
+                },
+              },
+            ])
+          </div>
+        </section>
+
+        <section class="department-contacts">
+          <p class="department-contacts__title centered">Отдел маркетинга и сбыта</p>
+
+          <div class="department-contacts__grid">
+            @@loop('../partials/contactItem.html', [
+              {
+                "title": "Начальник отдела маркетинга и сбыта",
+                "name": "typeNode",
+                "typeNode": '<strong>Шибун Леонид Федорович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "+375164222321",
+                  "phoneView": "+375 1642 4-16-91",
+                },
+              },
+              {
+                "title": "Специалисты по продаже",
+                "name": "numbers",
+                "numbersFirst": {
+                  "telLink": '375164222970',
+                  "telView": '+375 1642 2-29-70',
+                },
+                "numbersSecond": {
+                  "telLink": '375164245064',
+                  "telView": '+375 1642 4-50-64',
+                },
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "sale@kobrincheese.com",
+                  "emailView": "sale@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Cпециалисты по ВЭД",
+                "name": "number",
+                "number": {
+                  "telLink": "375164222604",
+                  "telView": "+375 1642 2-26-04",
+                },
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164222721",
+                  "phoneView": "+375 1642 2-27-21",
+                },
+              },
+              {
+                "title": "Cпециалисты по маркетингу",
+                "name": "number",
+                "number": {
+                  "telLink": "375164222604",
+                  "telView": "+375 1642 2-26-04",
+                },
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164221147",
+                  "phoneView": "+375 1642 2-11-47",
+                },
+              },
+            ])
+          </div>
+        </section>
+
+        <section class="department-contacts">
+          <p class="department-contacts__title centered">Руководящий состав</p>
+
+          <div class="department-contacts__grid">
+            @@loop('../partials/contactItem.html', [
+              {
+                "title": "Директор",
+                "name": "typeNode",
+                "typeNode": '<strong>Чиботарь Руслан Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "+375164222321",
+                  "phoneView": "+375 1642 2-23-21",
+                },
+              },
+              {
+                "title": "Приемная",
+                "name": "typeNode",
+                "typeNode": '<p>тел/факс  (+375 1642) 2-23-21</p>',
+                "contact": 'email',
+                "contactEmail": {
+                  "emailLink": "sec@kobrincheese.com",
+                  "emailView": " sec@kobrincheese.com",
+                },
+              },
+              {
+                "title": "Первый заместитель директора",
+                "name": "typeNode",
+                "typeNode": '<strong>Токарь Николай Николаевич</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164222721",
+                  "phoneView": "+375 1642 2-27-21",
+                },
+              },
+              {
+                "title": "Главный инженер",
+                "name": "typeNode",
+                "typeNode": '<strong>Грень Эдуард Иванович</strong>',
+                "contact": 'number',
+                "contactNumber": {
+                  "phoneLink": "375164221147",
+                  "phoneView": "+375 1642 2-11-47",
+                },
+              },
+            ])
+          </div>
+        </section>
+
+        <section class="our-details centered">
+          <p class="department-contacts__title">Наши реквизиты</p>
+          <p class="department-contacts__descr">
+            Республика Беларусь,<br>
+            225304, Брестская область,<br>
+            г. Кобрин, ул. Советская, 128.<br>
+            УНП 200093343
+          </p>
+          <a href="mailto:kbrmsz@brest.by" class="department-contacts__email">e-mail: kbrmsz@brest.by</a>
+        </section>
+        </div>
+      </div>
+    </main>
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2w0eDV5djR4MDJ5aDNkcWZkNHltYnRueSJ9.vDioPc-AyadxGUGN-7l2OA';
+    const map = new mapboxgl.Map({
+    container: 'contactsMap', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+</script>
+@@include('../utils/includes.html')
+</html>

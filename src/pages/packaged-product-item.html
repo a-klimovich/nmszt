@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@@include('../utils/head.html')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body class="page__body">
+  <div class="main-wrapper packaged-product-item">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/header-img-4.jpg',
+        'title': 'КОБРИНСКИЕ СЫРЫ ФАСОВАННЫЕ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="packaged-product-item__grid-layout">
+          <div class="disable-desc">
+            <h2 class="title">СЫР "СОЛНЕЧНЫЙ" 50% ФАСОВАННЫЙ СЕГМЕНТ</h2>
+            <p class="product-code">Код продукта: 730</p>
+          </div>
+          
+          <div class="grid-layout-col grid-layout-col--first">
+            <div class="image">
+              <div class="imageGalery">
+                <a href="./assets/img/product-7.jpg">
+                  <img src="./assets/img/product-7.jpg" alt="First image">
+                </a>
+              </div>
+              <button type="button" class="btn btn-reset btnZoomImage">
+                @@include('../assets/search-icon.svg')
+              </button>
+            </div>
+
+            <div class="table">
+              @@loop('../partials/table-row.html', [
+                { "image": "./assets/products-icons/Products_icon_1.png", "title": "Жирность:", "text": "50%" },
+                { "image": "./assets/products-icons/Products_icon_2.png", "title": "Вес:", "text": "200-300г." },
+                { "image": "./assets/products-icons/Products_icon_3.png", "title": "Упаковка:", "text": "Полимерная пленка, в газовой среде" },
+                { "image": "./assets/products-icons/Products_icon_4.png", "title": "Срок годности:", "text": "210 суток" },
+                { "image": "./assets/products-icons/Products_icon_5.png", "title": "Количество в тарном месте:", "text": "16 шт." },
+                { "image": "./assets/products-icons/Products_icon_6.png", "title": "Количество ящиков на полете:", "text": "210 шт." }
+              ])
+            </div>
+          </div>
+
+          <div class="grid-layout-col grid-layout-col--second">
+            <div class="wrap">
+              <h2 class="title">СЫР "СОЛНЕЧНЫЙ" 50% ФАСОВАННЫЙ СЕГМЕНТ</h2>
+              <p class="product-code">Код продукта: 730</p>
+
+              <p class="text">Сыр полутвёрдый "Солнечный" 50% . Его отличает удивительный оранжевый цвет теста, превосходный насыщенный 
+                сырный вкус и аромат с легким пряно-сладковатым привкусом и кислинкой, фруктовыми нотками во вкусе. Консистенция сыра - эластичная.
+                Тонкая многослойная полиолефиновая плёнка позволяет существенно продлить  срок   хранения  разделенного  на  порционные  куски  сыра. 
+                Обеспечивает  сохранение   вкусовых   качеств  благодаря   надежной защите  от  запахов  и  газов  извне. Внутри такой  упаковки особая 
+                газовая    среда.     Благодаря отсутствию в  ней   кислорода продукт    не    портится   
+                так быстро,   как   в    случае   с использованием   обычной  стрейч-пленки, и  в  то  же время  дышит, 
+                чего   не позволяет  вакуумная упаковка.</p>
+            </div>
+
+            <div class="social-box-wrapper">
+              @@include('../components/SocialBar/index.html')
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container--xl">
+        @@include('../components/ArrowNews/index.html')
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+<script>
+  window.addEventListener('load', function() {
+    baguetteBox.run('.imageGalery');
+  });
+</script>
+</html>

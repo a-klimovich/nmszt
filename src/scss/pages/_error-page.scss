@@ -1,0 +1,63 @@
+.error-page {
+  .error-content-wrapper {
+    @include flex-all-center;
+    position: relative;
+    height: 160px;
+
+    @include md {
+      height: 382px;
+    }
+    @include xl {
+      height: 954px;
+    }
+
+    img {
+      height: 100%;
+    }
+
+    .link-go-home {
+      position: absolute;
+      @include flex-all-center;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 76px;
+      height: 18px;
+      font-weight: 500;
+      font-size: 8px;
+      line-height: 10px;
+      color: $gray-2;
+
+      background-color: $white;
+
+      border: 1px solid $gray-3;
+      border-radius: 5px;
+
+      @include hover {
+        background-color: $orange;
+        border-color: $orange;
+        color: $white !important;
+        transition: all 0.3s;
+      }
+
+      @include md {
+        top: 18px;
+        font-size: 14px;
+        line-height: 17px;
+        width: 134px;
+        height: 28px;
+        border-width: 2px;
+      }
+
+      @include xl {
+        top: 62px;
+        width: 226px;
+        height: 54px;
+        font-size: 18px;
+        line-height: 22px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

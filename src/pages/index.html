@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('../utils/head.html')
+
+<body class="page__body">
+  <div class="main-wrapper index-page">
+    @@include('../components/Header/index.html')
+
+    @@include('../components/Sliders/MainSlider.html')
+   
+    <main class="main">
+      <div class="container">
+        <section class="about-plant">
+          <div class="about-plant__content">
+            <h4 class="title">
+              <!-- jsContent -->
+            </h4>
+            <p class="text">
+              <!-- jsContent -->
+            </p>
+            
+            <a href="#" class="btn-reset btn-max btn-learn-more">УЗНАТЬ БОЛЬШЕ</a>
+          </div>
+
+          <div class="about-plant__scheam active-section-1">
+            <div class="scheam-wrap">
+              <div class="scheam__img scheam__img-1">
+                @@include('../assets/book.svg') 
+              </div>
+              <div class="scheam__img scheam__img-2">
+                @@include('../assets/manufacture.svg')
+              </div>
+              <div class="scheam__img scheam__img-3">
+                @@include('../assets/roket.svg')
+              </div>
+              <div class="scheam__img scheam__img-4">
+                @@include('../assets/politics.svg')
+              </div>
+            </div>
+
+            <div class="scheam__lines">
+              <div class="line line_top">
+                <span class="line_text">ИСТОРИЯ</span>
+              </div>
+              <div class="line line_2">
+                <span class="line_text">ПРОИЗВОДСТВО</span>
+              </div>
+              <div class="line line_3">
+                <span class="line_text">МИССИЯ</span>
+              </div>
+              <div class="line line_bottom">
+                <span class="line_text">ПОЛИТИКА</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="fluid-wrapper bg-slider-logo">
+        <div class="container">
+          @@include('../components/Sliders/LogoSlider.html')
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="production">
+          <h2 class="production__title centered">ПРОДУКЦИЯ</h2>
+          <p class="production__subtitle centered">Вся продукция изготавливается из натурального <br> 
+            высококачественного отборного молока.</p>
+
+          <div class="production__gred">
+            @@include('../components/ProductItem/index.html', {
+              'image': './assets/img/product-1.jpg',
+              'title': 'Кобринские сыры',
+              'subtitle': 'Всегда только лучшее',
+            })
+            @@include('../components/ProductItem/index.html', {
+              'image': './assets/img/product-2.jpg',
+              'title': 'Фасованные сыры',
+              'subtitle': 'Сыры наполненные вкусом и любовью',
+            })
+            @@include('../components/ProductItem/index.html', {
+              'image': './assets/img/product-3.jpg',
+              'title': 'Йогурты',
+              'subtitle': 'Вкусно и полезно',
+            })
+            @@include('../components/ProductItem/index.html', {
+              'image': './assets/img/product-4.jpg',
+              'title': 'Цельномолочная продукция',
+              'subtitle': 'Польза и натуральный вкус',
+            })
+            
+            @@include('../components/ProductItem/index.html', {
+              'image': './assets/img/product-5.jpg',
+              'title': 'Кисломолочная продукция',
+              'subtitle': 'Источник жизненной энергии',
+            })
+
+            @@include('../components/ProductItem/index.html', {
+              'image': './assets/img/product-6.jpg',
+              'title': 'Мороженое Бринко-айс',
+              'subtitle': 'Широкий ассортимент',
+            })
+          </div>
+        </section>
+      </div>
+
+      <div class="fluid-wrapper bg-slider-logo-1">
+        <div class="container">
+          <h2 class="centered">НОВИНКИ</h2>
+
+          @@include('../components/Sliders/SliderProduct.html')
+        </div>
+      </div>
+      
+      <section class="index-page__news">
+        <h2 class="centered">НОВОСТИ</h2>
+
+        <div class="index-page__news--wrapper">
+          @@include('../components/NewsCardSmall/index.html', {
+            'image': './assets/img/n-1.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
+            'date': 'декабрь 09, 2021',
+          })
+          @@include('../components/NewsCardSmall/index.html', {
+            'image': './assets/img/n-2.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
+            'date': 'декабрь 09, 2021',
+          })
+          @@include('../components/NewsCardSmall/index.html', {
+            'image': './assets/img/n-3.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
+            'date': 'декабрь 09, 2021',
+          })
+          @@include('../components/NewsCardSmall/index.html', {
+            'image': './assets/img/n-4.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
+            'date': 'декабрь 09, 2021',
+          })
+        </div>
+
+        <button class="btn-reset btn-max btn-news">УЗНАТЬ БОЛЬШЕ</button>
+      </section>
+
+      <div class="bg-img-exclusive">
+        <div class="container">
+          <section class="index-page__always-best">
+            <h2 class="always-best-title centered color-white">ВСЕГДА ТОЛЬКО ЛУЧШЕЕ!</h2>
+            <p class="always-best-subtitle centered color-orange">Мы работаем на качество и результат</p>
+            
+            <div class="index-page__always-best--wrapper">
+              <div class="cardochka">
+                <div class="icone">
+                  <img src="./assets/exclusiv3.png" alt="exclusve">
+                </div>
+                <p class="text color-white">ОБЪЕМ ПЕРЕРАБОТКИ МОЛОКА ДО 500 Т/СУТКИ</p>
+              </div>
+              <div class="cardochka">
+                <div class="icone">
+                  <img src="./assets/exclusiv4.png" alt="exclusiv">
+                </div>
+                <p class="text color-white">ЭКСКЛЮЗИВНЫЕ СОРТА СЫРА</p>
+              </div>
+              <div class="cardochka">
+                <div class="icone">
+                  <img src="./assets/exclusive1.png" alt="exclusve">
+                </div>
+                <p class="text color-white">СЕРТИФИКАЦИЯ ISO 9001 ISO 22000 НАССР</p>
+              </div>
+              <div class="cardochka">
+                <div class="icone">
+                  <img src="./assets/exclusiv2.png" alt="exclusve">
+                </div>
+                <p class="text color-white">УНИКАЛЬНЫЕ СОБСТВЕННЫЕ РАЗРАБОТКИ</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="managment-stuff">
+          <h2 class="centered">РУКОВОДЯЩИЙ СОСТАВ</h2>
+  
+          @@include('../components/Sliders/ManagmentStuf.html')
+        </section>
+      </div>
+
+      <div class="bg-gray-6">
+        <div class="container">
+          <div class="charity">
+            <p class="charity__text centered">  
+              Программа мероприятий по реализации 
+              профилактического проекта "Кобринский район - <br>
+              территория здоровья" на 2020 - 2025г.
+            </p>
+
+            <div class="charity__img-wrapper">
+              <img src="./assets/char-1.png" alt="charity image logo">
+              <img src="./assets/char-2.png" alt="charity image logo">
+            </div>
+          </div>
+        </div>
+      </div> 
+    </main>
+    
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+<body class="page__body">
+  <div class="main-wrapper news-list">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/news.jpg',
+        'title': 'НОВОСТИ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="news-list__grid">
+          @@include('../components/NewsCard/index.html', {
+            'image': './assets/img/news-list.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': './assets/img/news-list.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': './assets/img/news-list.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': './assets/img/news-list.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': './assets/img/news-list.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+          @@include('../components/NewsCard/index.html', {
+            'image': './assets/img/news-list.jpg',
+            'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+            'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+            'date': 'Июнь 28, 2019',
+          })
+        </div>
+
+        @@include('../components/Pagination/index.html')
+
+        <div class="divider"></div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+</html>

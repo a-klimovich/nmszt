@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+<body class="page__body">
+  <div class="main-wrapper answer-and-question">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/header-img-6.jpg',
+        'title': 'ВОПРОС-ОТВЕТ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="layout">
+          <div class="layout__content">
+            <div class="answer-and-question__grid">
+              @@include('../components/QuestionsCard/index.html', {
+                'question': 'Здравствуйте! Подскажите, пожалуйста, из каких компонентов изготавливается ваше мягкое мороженое в рожке?',
+                'answer': 'Добрый день. Будем рады видеть Вас в числе своих покупателей. Адрес: Фирменный павильон "Кобринские сыры" г. Брест, ул. Гродненская, д.32/1 (район "Авторынка")',
+                'userName': 'Владимир',
+                'country': 'PФ',
+              })
+              @@include('../components/QuestionsCard/index.html', {
+                'question': 'Здравствуйте, Я обычный сыроед с большим стажем, не мало ел и пробовал сыров разных стран. Но очень нравится Ваши Сыры, вкусные с ярко выраженным сырным вкусом и запахом, так же доступные по цене в России. Только очень жаль, что мало информации о составе и пищевой ценности, хотелось бы знать сколько и что принимать во внутрь. Ведь сегодня ЕДА имеет и побочные эффекты и противопоказания (совсем как лекарства). Спасибо огромное за Ваш неоценимый труд.',
+                'answer': 'Добрый день. Будем рады видеть Вас в числе своих покупателей. Адрес: Фирменный павильон "Кобринские сыры" г. Брест, ул. Гродненская, д.32/1 (район "Авторынка")',
+                'userName': 'Владимир',
+                'country': 'PФ',
+              })
+              @@include('../components/QuestionsCard/index.html', {
+                'question': 'Добрый день, где в Бресте можно приобрести вашу продукцию (интересует район авторынка)?',
+                'answer': 'Добрый день. Будем рады видеть Вас в числе своих покупателей. Адрес: Фирменный павильон "Кобринские сыры" г. Брест, ул. Гродненская, д.32/1 (район "Авторынка")',
+                'userName': 'Владимир',
+                'country': 'PФ',
+              })
+            </div>
+            
+          </div>
+
+          <div class="layout__nav pt-2">
+            @@include('../components/SectionMenu/index.html')
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+</html>

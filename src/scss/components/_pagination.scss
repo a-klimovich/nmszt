@@ -1,0 +1,76 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  @include md {
+    justify-content: flex-start;
+  }
+
+  &__number {
+    display: none;
+    &:nth-child(-n + 7) {
+      display: flex;
+    }
+
+    @include md {
+      display: flex;
+    }
+  }
+
+  a {
+    font-family: 'Century Gothic';
+    width: 39px;
+    height: 39px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: $gray-3;
+
+    transition: background-color 0.3s;
+    border: 2px solid $gray-3;
+    @include mr(6px);
+
+    @include lg {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  a.active {
+    color: $orange;
+    border-color: $orange;
+  }
+
+  & a:hover:not(.active) {
+    color: $orange;
+    border-color: $orange;
+  }
+  
+  &__next, &__prev {
+    display: flex;
+
+    svg {
+      width: 24px;
+      height: 18px;
+    
+      & path {
+        fill: $gray-3;
+      }
+    }
+
+    &:hover {
+      svg path {
+        fill: $orange;
+      }
+    }
+  }
+
+  &__prev {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+}

@@ -1,0 +1,117 @@
+.contacts-page {
+  &__map {
+    margin: auto;
+    height: 115px;
+    margin-top: 13px;
+    margin-bottom: 5px;
+
+    @include md {
+      height: 269px;
+      margin-top: 21px;
+      margin-bottom: 25px;
+    }
+
+    @include xl {
+      height: 471px;
+      margin-top: 50px;
+      margin-bottom: 23px;
+    }
+  }
+
+  .department-contacts {
+    padding-top: 5px;
+    margin: auto;
+
+    @include md {
+      width: 700px;
+      padding-top: 25px;
+    }
+    @include xxl {
+      padding-top: 23px;
+      width: 100%;
+    }
+
+    &__title {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: $gray-2;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 10px;
+      margin-bottom: 18px;
+
+      @include md {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 25px;
+        margin-bottom: 27px;
+      }
+      @include xxl {
+        margin-top: 40px;
+        margin-bottom: 43px;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .contact-card {
+        margin-bottom: 7px;
+        margin-right: 14px;
+
+        @include md {
+          margin-right: 7px;
+          margin-bottom: 7px;
+        }
+
+        @include xxl {
+          margin-right: 15px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &__descr {
+      width: 233px;
+      margin: auto;
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: $gray-2;
+
+      @include md {
+        width: 349px;
+        margin-bottom: 42px;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      @include xxl {
+        margin-bottom: 80px;
+      }
+    }
+    &__email {
+      display: block;
+      margin-bottom: 44px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.02em;
+      color: $gray-2;
+
+      @include md {
+        margin-bottom: 82px;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      @include xxl {
+        margin-bottom: 72px;
+      }
+    }
+  }
+}

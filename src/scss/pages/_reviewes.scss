@@ -1,0 +1,150 @@
+.reviewes {
+  &__grid {
+    display: grid;
+    row-gap: 8px;
+    margin-bottom: 30px;
+
+    @include md {
+      row-gap: 16px;
+      margin-bottom: 49px;
+    }
+
+    @include xl {
+      row-gap: 10px;
+      margin-bottom: 66px;
+    }
+  }
+
+  .comment-form {
+    background: #ffffff;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 7px;
+    padding-bottom: 19px;
+
+    @include md {
+      box-shadow: 5px 5px 16px 5px rgba(0, 0, 0, 0.25);
+      border-radius: 21px;
+      padding: 18px;
+      padding-bottom: 38px;
+    }
+
+    &__title {
+      margin-top: 40px;
+      margin-bottom: 6px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+
+      @include md {
+        font-size: 22px;
+        line-height: 27px;
+      }
+
+      @include lg {
+        margin-bottom: 30px;
+        margin-top: 67px;
+      }
+    }
+
+    .row-inputs {
+      display: flex;
+      align-items: flex-start;
+
+      label {
+        @include mr(8px);
+      }
+    }
+
+    &__label,
+    &__input,
+    &__textarea {
+      background: #e0e0e0;
+      border-radius: 9px;
+      width: 100%;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+
+        color: #545250;
+      }
+
+      @include md {
+        &::placeholder {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    &__label {
+      display: flex;
+      margin-bottom: 10px;
+
+      @include md {
+        margin-bottom: 18px;
+        height: 57px;
+      }
+    }
+
+    &__input {
+      padding: 7px 6px;
+
+      @include md {
+        padding: 11px 12px;
+      }
+    }
+
+    &__textarea {
+      padding: 7px 6px;
+      margin-bottom: 10px;
+      border-color: transparent;
+      min-height: 107px;
+
+      @include md {
+        padding: 11px 12px;
+        margin-bottom: 18px;
+        height: 207px;
+      }
+    }
+
+    .btn-wrapper {
+      @include flex-all-center;
+      flex-direction: column;
+
+      .isSandingMessage {
+        display: inline-block;
+        padding: 10px 0;
+      }
+    }
+
+    &__btn {
+      width: 96px;
+      height: 29px;
+      background: #ffffff;
+      border: 2px solid $gray-3;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: $gray-2;
+      transition: ease-in-out 0.355s;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+        border-color: $white;
+      }
+
+      @include md {
+        width: 226px;
+        height: 54px;
+        padding: 16px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}

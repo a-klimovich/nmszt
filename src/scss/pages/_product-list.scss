@@ -1,0 +1,19 @@
+.product-list-page {
+  &__grid {
+    display: grid;
+    gap: 14px 0;
+    padding: 12px 0 25px;
+    
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px 24px;
+      padding: 33px 0 51px;
+    }
+
+    @include xl {
+      gap: 14px 36px;
+      padding: 40px 0 85px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

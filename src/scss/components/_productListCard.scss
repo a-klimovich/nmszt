@@ -1,0 +1,182 @@
+.production-list-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: fit-content;
+  height: 332px;
+  background-color: $white;
+  cursor: pointer;
+
+  @include md {
+    height: 388px;
+  }
+
+  @include xl {
+    height: 484px;
+
+    &:hover {
+      .list-wrapper .list-menu {
+        display: flex;
+      }
+  
+      .counter::before {
+        content: '-';
+      }
+    }
+  }
+
+  .list-wrapper {
+    margin-bottom: auto;
+    position: relative;
+
+    .list-image {
+      @include bg-cover;
+      height: 280px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include md {
+        height: 316px;
+      }
+      
+      @include xl {
+        height: 368px;
+      }
+    }
+
+    .list-menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        text-align: center;
+        padding: 2px 0;
+        width: 100%;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $gray-2;
+      }
+
+      @include md {
+        align-items: flex-start;
+        padding-left: 1rem;
+
+        li {
+          text-align: start;
+          padding: 5px 0;
+        }
+
+        a {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      @include xl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.77);
+
+        li {
+          width: 100%;
+          text-align: center;
+
+          @include hover {
+            background: $white;
+            
+            a {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    padding: 0.5rem 0;
+    height: 100%;
+
+    .list-item-counter {
+      display: none;
+      min-width: 35px;
+      height: 35px;
+      background-color: $orange;
+      border-radius: 50%;
+
+      span {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: $gray-6;
+      }
+
+      .counter::before {
+        content: '+';
+      }
+    }
+
+    @include md {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      line-height: 29px;
+
+      .list-item-counter {
+        @include flex-all-center;
+      }
+    }
+
+    @include xl {
+      font-size: 36px;
+      line-height: 44px;
+      justify-content: center;
+
+      .list-item-counter {
+        display: none;
+      }
+    }
+  }
+
+  &.active {
+    height: auto;
+    
+    .list-menu {
+      display: flex;
+    }
+
+    @include xl {
+      height: 484px;
+
+      .list-menu {
+        display: none;
+      }
+    }
+
+    .counter::before {
+      content: '-';
+    }
+  }
+}

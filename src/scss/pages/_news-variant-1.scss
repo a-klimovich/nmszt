@@ -1,0 +1,54 @@
+
+.news-variant-page {
+  .news-variant {
+    &__text {
+      font-size: 16px;
+      color: $gray-2;
+      letter-spacing: -0.02em;
+
+      @include md {
+        font-size: 24px;
+      }
+    }
+    &__text-before {
+      margin-bottom: 21px;
+
+      @include md {
+        margin-bottom: 34px;
+      }
+
+      @include xl {
+        margin-bottom: 45px;
+      }
+    }
+
+    &__text-after {
+      margin-top: 15px;
+      margin-bottom: 19px;
+
+      @include md {
+      margin-top: 30px;
+      margin-bottom: 48px;
+      }
+
+      @include xl {
+        margin-top: 40px;
+        margin-bottom: 72px;
+      }
+    }
+    &__map {
+      height: 162px;
+      margin-bottom: 21px;
+
+      @include md {
+        height: 352px;
+        margin-bottom: 47px;
+      }
+
+      @include xl {
+        height: 526px;
+        margin-bottom: 62px;
+      }
+    }
+  }
+}

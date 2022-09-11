@@ -1,0 +1,81 @@
+blockquote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: $gray-2;
+  padding-left: calc(17px + 4px);
+  transition: 0.2s border ease-in-out;
+  margin-bottom: 10px;
+
+  @include md {
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: calc(38px + 11px);
+  }
+
+  @include xl {
+    padding-left: calc(67px + 12px);
+  }
+
+  &:before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $gray-6;
+    width: 17px;
+
+    @include md {
+      font-size: 24px;
+      line-height: 29px;
+      padding-left: 38px;
+    }
+
+    @include xl {
+      padding-left: 67px;
+    }
+  }
+
+  &:after {
+    content: "“";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    width: 15px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $gray-3;
+
+    @include md {
+      width: 38px;
+      font-size: 64px;
+      line-height: 78px;
+    }
+
+    @include xl {
+      width: 67px;
+    }
+  }
+
+  cite {
+    text-align: right;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: $orange;
+
+    @include md {
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+}

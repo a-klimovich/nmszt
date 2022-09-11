@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@@include('../utils/head.html')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body class="page__body">
+  <div class="main-wrapper news-item-page news-item-page__variant-1">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/news.jpg',
+        'title': 'НОВОСТИ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="news-item-page__content-wrapper">
+          @@include('../components/NewsTitleAndDate/index.html', {
+          'title': 'Гран При конкурса "Лучшая продукция года - 2021"!',
+          'date': 'Июнь 28, 2019'
+          })
+
+          <p>
+            Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное
+            качество продукции!
+          </p>
+          <br>
+          <p>
+            9 ноября состоялась церемония награждения Победителей Конкурса «ЛУЧШАЯ ПРОДУКЦИЯ ГОДА 2021», по результатам
+            которого предприятие было удостоено Дипломами победителя в следующих номинациях:
+          </p>
+          <br>
+          <p>"Мороженое" за "Пломбир на сливках" в вафельном стакане, 12%</p>
+          <br>
+          <p>"Сыры сычужные" за сыры "Арамель с пажитником" 50% и "МонБлан. Старый Утес" 50%</p>
+          <br>
+          <p>"Масло сливочное" за масло сладкосливочное несоленое 82,5%</p>
+          <br>
+          <p>"Майонез" за "Провансаль кобринский" 51%.</p>
+          <br><br>
+
+          <div class="news-item-page__image-grid">
+            <a href="./assets/img/news-item-1.jpg">
+              <img src="./assets/img/news-item-1.jpg" alt="">
+            </a>
+            <a href="./assets/img/news-item-1.jpg">
+              <img src="./assets/img/news-item-1.jpg" alt="">
+            </a>
+            <a href="./assets/img/news-item-1.jpg">
+              <img src="./assets/img/news-item-1.jpg" alt="">
+            </a>
+            <a href="./assets/img/news-item-1.jpg">
+              <img src="./assets/img/news-item-1.jpg" alt="">
+            </a>
+            <a href="./assets/img/news-item-1.jpg">
+              <img src="./assets/img/news-item-1.jpg" alt="">
+            </a>
+            <a href="./assets/img/news-item-1.jpg">
+              <img src="./assets/img/news-item-1.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="fluid-wrapper bg-gray-6">
+        <div class="container container--xl">
+          @@include('../components/SocialBar/index.html')
+        </div>
+      </div>
+
+      <div class="container container--xl">
+        @@include('../components/ArrowNews/index.html')
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+<script>
+  window.addEventListener('load', function() {
+    baguetteBox.run('.news-item-page__image-grid');
+  });
+</script>
+</html>

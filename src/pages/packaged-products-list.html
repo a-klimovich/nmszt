@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@@include('../utils/head.html')
+
+<body class="page__body">
+  <div class="main-wrapper packaged-products-list-page">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/header-img-4.jpg',
+        'title': 'КОБРИНСКИЕ СЫРЫ ФАСОВАННЫЕ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="packaged-products-list-page__content-wrapper">
+          <div class="packaged-products-list-page__grid">
+            @@include('../components/ProductPacaged/index.html')
+            @@include('../components/ProductPacaged/index.html')
+            @@include('../components/ProductPacaged/index.html')
+            @@include('../components/ProductPacaged/index.html')
+            @@include('../components/ProductPacaged/index.html')
+            @@include('../components/ProductPacaged/index.html')
+          </div>
+  
+          <p class="text">
+            Сохранение старых традиций, современная технология, талант и любовь мастеров-сыроделов создают для Вас сыры высокого качества. Сыры изготавливаются из натурального высококачественного, тщательно отсортированного молока. 
+            Завод выпускает следующие сорта сыра: твердые, полутвердые и с пропионовокислыми бакетриями. 
+            Высокое качество кобринских сыров неоднократно отмечалось дипломами, сыры признавались лучшими на республиканских и областных смотрах-конкурсах. 
+            Подробнее с каждой группой фасованных сыров Вы можете ознакомиться в нашем каталоге.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+
+</html>

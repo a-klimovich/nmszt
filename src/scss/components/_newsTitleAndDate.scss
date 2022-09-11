@@ -1,0 +1,47 @@
+.news-item-title-and-date {
+  margin-bottom: 14px;
+  margin-top: 6px;
+  @include md {
+    margin-bottom: 32px;
+    margin-top: 25px;
+  }
+  @include xl {
+    margin-bottom: 40px;
+    margin-top: 53px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $black;
+    margin-bottom: 18px;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+      font-size: 36px;
+      line-height: 43px;
+    }
+    @include xl {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: -0.02em;
+    color: $orange;
+    font-style: italic;
+
+    @include md {
+      text-align: left;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+}

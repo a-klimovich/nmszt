@@ -1,0 +1,56 @@
+.achievements {
+  &__text {
+    color: $gray-2;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @include md {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include xl {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    row-gap: 8px;
+    margin-bottom: 36px;
+    
+    @include md {
+      row-gap: 16px;
+      margin-bottom: 43px;
+    }
+    @include xl {
+      row-gap: 33px;
+      margin-bottom: 68px;
+    }
+  }
+  .layout {
+    padding-top: 13px;
+    padding-bottom: 42px;
+    @include md {
+      padding-top: 21px;
+      padding-bottom: 78px;
+    }
+    @include xl {
+      padding-top: 65px;
+      margin-bottom: 0;
+    }
+  }
+
+  .layout__nav {
+    padding-bottom: 21px;
+    @include md {
+      padding-bottom: 32px;
+    }
+  }
+}

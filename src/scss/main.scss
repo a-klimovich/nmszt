@@ -1,0 +1,15 @@
+// базовые подключения
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// PAGES
+@import './pages/main';
+
+// SLIDER BASE
+@import "slick-theme";
+
+// COMPONENT
+@import "./components/main";
+

@@ -1,0 +1,54 @@
+.comment-card {
+  padding: 10px 8px;
+
+  @include md {
+    padding: 20px 30px;
+  }
+
+  .text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: $gray-2;
+    margin-bottom: 0.7rem;
+
+    @include md {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  .comment__details {
+    display: flex;
+    justify-content: space-between;
+
+    &--user {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: -0.02em;
+      color: $gray-2;
+
+      @include md {
+        font-size: 22px;
+        line-height: 27px;
+      }
+    }
+
+    &--date {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: right;
+      letter-spacing: -0.02em;
+      color: $orange;
+
+      @include md {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}

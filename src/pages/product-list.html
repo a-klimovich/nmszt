@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@@include('../utils/head.html')
+
+<body class="page__body">
+  <div class="main-wrapper product-list-page product-list-page__variant-1">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/header-img-5.jpg',
+        'title': 'ПРОДУКЦИЯ'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container container--xl">
+        <div class="product-list-page__grid">
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'КОБРИНСКИЕ СЫРЫ',
+            'image': './assets/img/product-list-1.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'КОБРИНСКИЕ СЫРЫ ФАСОВАННЫЕ',
+            'image': './assets/img/product-list-2.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'МОРОЖЕНОЕ БРИНКО-АЙС',
+            'image': './assets/img/product-list-3.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'ЦЕЛЬНОМОЛОЧНАЯ ПРОДУКЦИЯ',
+            'image': './assets/img/product-list-4.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'МЯГКИЕ СЫРЫ, ТВОРОГ',
+            'image': './assets/img/product-list-5.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'КИСЛОМОЛОЧНАЯ ПРОДУКЦИЯ',
+            'image': './assets/img/product-list-6.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'МАСЛО СЛИВОЧНОЕ',
+            'image': './assets/img/product-list-7.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'ПЛАВЛЕНЫЕ СЫРЫ',
+            'image': './assets/img/product-list-8.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'МАЙОНЕЗЫ',
+            'image': './assets/img/product-list-9.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'ГОРЧИЦА',
+            'image': './assets/img/product-list-10.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'СУХИЕ МОЛОЧНЫЕ ПРОДУКТЫ',
+            'image': './assets/img/product-list-11.jpg'
+          })
+          @@include('../components/ProductListCard/index.html', {
+            'title': 'ЗЦМ, ЗСОМ',
+            'image': './assets/img/product-list-12.jpg'
+          })
+        </div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+
+</html>

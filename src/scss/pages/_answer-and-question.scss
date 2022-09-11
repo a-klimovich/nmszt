@@ -1,0 +1,17 @@
+.answer-and-question {
+  &__grid {
+    display: grid;
+    row-gap: 8px;
+    margin-bottom: 24px;
+
+    @include md {
+      row-gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    @include xl {
+      row-gap: 10px;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@@include('../utils/head.html')
+
+<body class="page__body">
+  <div class="main-wrapper error-page">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      <div class="container container--xl">
+        <div class="error-content-wrapper">
+          <a href="#" class="link-go-home">
+            НА ГЛАВНУЮ
+          </a>
+  
+          <img srcset="./assets/errors/404-lg.jpg 992w,
+                      ./assets/errors/404-md.jpg 520w,
+                      ./assets/errors/404-sm.jpg" 
+              sizes="(min-width: 992px) 992px,
+                      (min-width: 520px) 520px"
+              src="./assets/errors/404-sm.jpg" class="image" alt="ERROR">
+        </div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+
+</html>

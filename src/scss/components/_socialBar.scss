@@ -1,0 +1,51 @@
+.social-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13px 0 16px;
+
+  @include md {
+    flex-direction: row;
+    padding: 19px 0;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-right: 0;
+    margin-bottom: 12px;
+
+    @include md {
+      font-size: 24px;
+      line-height: 29px;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__icone {
+    @include mr(7px);
+
+    [class^="icone--"] {
+      width: 36px;
+      height: 36px;
+
+      @include md {
+        width: 40px;
+        height: 40px;
+      }
+
+      @include hover {
+        path {
+          fill: $gray-2;
+        }
+      }
+    }
+  }
+}
