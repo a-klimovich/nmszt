@@ -17,7 +17,7 @@
       const scrollTopDocumentElement = $(document.documentElement).scrollTop();
       const $header = $("header");
 
-      if (scrollTop > 166 || scrollTopDocumentElement > 166) {
+      if (scrollTop > 72 || scrollTopDocumentElement > 72) {
         $header.addClass("scroll");
       } else {
         $header.removeClass("scroll");

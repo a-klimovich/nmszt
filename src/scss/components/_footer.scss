@@ -1,78 +1,8 @@
 .footer {
-  .wrapper__social {
-    background-color: #404855;
-    margin-bottom: 10px;
-    @include md {
-      margin-bottom: 18px;
-    }
-    .social {
-      @include flex-all-center;
-      flex-direction: column;
-      color: $white;
-      padding-top: 20px;
-      padding-bottom: 21px;
-      @include md {
-        padding-top: 32px;
-        padding-bottom: 61px;
-      }
-
-      &__title {
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 29.26px;
-        margin-bottom: 25px;
-        text-align: center;
-
-        @include md {
-          font-weight: 500;
-          font-size: 36px;
-          margin-bottom: 60px;
-          line-height: 44px;
-        }
-      }
-
-      &__list {
-        a {
-          @include mr(55px);
-
-          @include hover {
-            svg circle {
-              fill: $blue;
-            }
-
-            .youTube {
-              path {
-                fill: $blue;
-              }
-            }
-          }
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        &__title {
-          font-size: 24px;
-          line-height: 29px;
-        }
-
-        &__list {
-          a {
-            @include mr(20px);
-
-            svg {
-              width: 48px;
-              height: 48px;
-
-              @include md {
-                width: 85px;
-                height: 85px;
-              }
-            }
-
-          }
-        }
-      }
-    }
+  color: $white;
+  
+  a {
+    color: $white;
   }
 
   .wrapper__navigate {
@@ -109,20 +39,20 @@
         justify-content: space-between;
       }
 
-      p {
-        color: $white;
+      h4 {
         font-weight: 500;
         font-size: 23px;
         line-height: 28.04px;
+        margin-bottom: 25px;
       }
 
       li a {
-        font-size: 18px;
-        line-height: 22px;
-        color: $blue;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
 
         @include hover {
-          color: $white;
+          color: $dark-blue;
 
           svg {
             fill: $white;
@@ -130,17 +60,41 @@
         }
       }
 
+      &__social {
+        order: 3;
+
+        p {
+          margin-bottom: 41px;
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: 150px;
+          
+          li {
+            flex: 0 0 33.333%;
+            margin-bottom: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            svg {
+              max-width: 36px;
+              height: 36px;
+            }
+          }
+        }
+      }
+
       &__connect {
         order: 2;
+
         @include md {
           margin-right: 126px;
-          order: 1;
         }
         @include xl {
           margin-right: 0;
-        }
-        .title {
-          margin-bottom: 41px;
         }
 
         .contacts {
@@ -156,37 +110,12 @@
             }
           }
         }
-
-        .footer-btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 226px;
-          height: 54px;
-          background: $white;
-          border-radius: 10px;
-          margin-bottom: 21px;
-
-          @include md {
-            margin-bottom: 74px;
-          }
-          @include xl {
-            margin-bottom: 0;
-          }
-          @include hover {
-            background-color: $blue;
-            color: $white;
-          }
-
-        }
       }
 
       &__links {
         margin-bottom: 31px;
         order: 1;
-        @include md {
-          order: 2;
-        }
+
         p {
           margin-bottom: 23px;
         }
@@ -203,13 +132,30 @@
       }
 
       &__address {
-        order: 3;
-        
-        .logo svg {
-          @include md {
-            margin-left: 61px;
+        order: 4;
+
+        .logo a {
+          display: flex;
+          margin-bottom: 20px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+              font-weight: 600;
+              font-size: 13px;
+              line-height: 16px;
+            }
+          }
+  
+          img {
+            width: 70px;
+            margin-right: 12px;
           }
         }
+
         .location {
           margin-bottom: 36px;
 
@@ -224,10 +170,9 @@
           &__link {
             display: inline-block;
             font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-            max-width: 268px;
-            color: $blue;
+            font-size: 11px;
+            line-height: 16px;
+            max-width: 205px;
           }
         }
       }
@@ -235,14 +180,15 @@
   }
 
   .wrapper__copyright {
-    background-color: #343C49;
-    padding: 49px 0 37px 0;
+    @include flex-all-center;
+    background-color: $dark-blue;
+    height: 50px;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 11px;
+    line-height: 13px;
 
     .copyright-text {
-      color: $gray-4;
+      color: $white;
     }
   }
 }

@@ -10,6 +10,7 @@
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   color: $gray-2;
+  letter-spacing: -0.015em;
 }
 
 .page__body {
@@ -197,6 +198,10 @@ hr {
 
 .m-0 {
   margin: 0 !important;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
 }
 
 .mb-7 {
