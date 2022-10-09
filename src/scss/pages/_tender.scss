@@ -1,0 +1,136 @@
+.tender-list {
+  .about-tender {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $blue;
+      border-bottom: solid 2px $gray-5;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      @include md {
+        flex-direction: row;
+      }
+    }
+
+    .tender-status {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 2px $gray-5;
+      padding: 0 30px;
+      margin-bottom: 50px;
+
+      .text,
+      .status {
+        display: flex;
+        align-items: center;
+        height: 65px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      .status {
+        color: $blue;
+      }
+    }
+
+    .column-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+      background-color: $white;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .info {
+      flex: 1 0 100%;
+
+      @include md {
+        flex: 1 0 30%;
+      }
+      @include lg {
+        flex: 1 0 80%;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+
+        &:nth-child(even) {
+          background-color: $gray-5;
+        }
+
+        .name,
+        .data {
+          flex: 1 0 50%;
+          padding: 0 12px;
+        }
+
+        .name {
+          font-style: italic;
+          flex: 1 0 30%;
+        }
+
+        .data {
+          text-align: center;
+          flex: 1 0 70%;
+        }
+      }
+    }
+
+    .documents {
+      flex: 1 0 100%;
+      background-color: $gray-5;
+
+      @include md {
+        flex: 1 0 30%;
+      }
+      @include lg {
+        flex: 1 0 20%;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        height: 65px;
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        .icon {
+          margin-right: 0.64rem;
+        }
+      }
+    }
+  }
+}
+
+.text-tender-from {
+  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+}

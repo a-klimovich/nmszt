@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@@include('../utils/head.html')
+
+<body class="page__body">
+  <div class="main-wrapper">
+    @@include('../components/Header/index.html')
+
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', {
+      'image': './assets/img/header-img.jpg',
+      'title': 'Тендеры'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container">
+        <div class="tender-list">
+          <div class="about-tender">
+            <h3 class="about-tender__title">Тендер№ 2020-818075:Закупка мешков-вкладышей из полиэтилена</h3>
+            
+            <div class="about-tender__wrapper">
+              <div class="info">
+                <!-- TITLE -->
+                <p class="column-title">Информация о тендере</p>
+
+                <!-- DATA -->
+                <div class="info__item">
+                  <div class="name">Предмет закупки</div>
+                  <div class="data">мешки-вкладыши ПВД прозрачные</div>
+                </div>
+                
+                <div class="info__item">
+                  <div class="name">Количество</div>
+                  <div class="data">240 000 шт.</div>
+                </div>
+
+                <div class="info__item">
+                  <div class="name">Ориентировочная стоимость закупки </div>
+                  <div class="data">100 000 BYN</div>
+                </div>
+                
+                <div class="info__item">
+                  <div class="name">Срок поставки</div>
+                  <div class="data">c 15.07.2020 по 14.07.2021</div>
+                </div>
+
+                <div class="info__item">
+                  <div class="name">Место поставки</div>
+                  <div class="data">Согласно ТЭЗ</div>
+                </div>
+                
+                <div class="info__item">
+                  <div class="name">Место и порядок представления конкурсных предложений</div>
+                  <div class="data">Согласно ТЭЗ</div>
+                </div>
+
+                <div class="info__item">
+                  <div class="name">ФИО, номера телефонов ответственных работников</div>
+                  <div class="data">Захарчук Владислав Михайлович <br>
+                    (специалист по организации закупок) <br>
+                    +375(1647)2 77 89</div>
+                </div>
+                
+                <div class="info__item">
+                  <div class="name">Дата открытия тендера</div>
+                  <div class="data">23.06.2020</div>
+                </div>
+                
+                <div class="info__item">
+                  <div class="name">Дата окончания тендера</div>
+                  <div class="data">30.06.2020 в 14:30</div>
+                </div>
+
+                <!-- STATUS -->
+              </div>
+    
+              <ul class="documents list-reset">
+                <p class="column-title">Документы</p>
+                <!-- documnets -->
+                <li class="documents__item">
+                  <a class="documents__link" href="#">
+                    <span class="icon">@@include('../assets/svg/tender-doc.svg')</span>
+                    <span>ТЭЗ на закупку</span>
+                  </a>
+                </li>
+                <li class="documents__item">
+                  <a class="documents__link" href="#">
+                    <span class="icon">@@include('../assets/svg/tender-doc.svg')</span>
+                    <span>Предложение на закупку (форма)</span>
+                  </a>
+                </li>
+                <li class="documents__item">
+                  <a class="documents__link" href="#">
+                    <span class="icon">@@include('../assets/svg/tender-doc.svg')</span>
+                    <span>Договор поставки</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tender-status">
+              <div class="text">Статус</div>
+              <div class="status">Завершен</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-tender-from">
+          Тендер размещен: портал <a href="icetrade.by" target="_blank">icetrade.by</a>
+        </div>
+        <div class="bottom-space-5"></div>
+      </div>
+    </main>
+    
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+
+</html>
