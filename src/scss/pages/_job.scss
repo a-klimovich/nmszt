@@ -1,0 +1,11 @@
+.job-page {
+  .text {
+    margin: 18px 0;
+    text-align: center;
+
+    @include md {
+      margin: 30px 0;
+      text-align: left;
+    }
+  }
+}

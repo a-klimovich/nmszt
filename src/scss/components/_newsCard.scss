@@ -1,31 +1,37 @@
-.news-card {
+.job-card {
   display: flex;
   flex-direction: column;
   padding: 13px;
-  height: 452px;
+  height: 360px;
+  border: solid 2px $gray-5;
+  border-radius: 12px;
+  margin-bottom: 10px;
   $this: &;
-  
-  &:hover {
-    #{$this}__img img {
-      transition: ease-in-out 0.344s;
-      transform: scale(1.1);
-    }
-  }
 
   @include md {
-    height: 643px;
+    height: 470px;
     padding: 22px;
   }
 
   @include lg {
     flex-direction: row;
-    height: 338px
+    height: 290px
+  }
+  
+  &:hover {
+    #{$this}__img img {
+      transition: ease-in-out 0.344s;
+      transform: scale(1.033);
+    }
+
+    color: $gray-2;
   }
 
   &__img {
     @include flex-all-center;
-    height: 155px;
     margin-bottom: 9px;
+    height: 117px;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -33,13 +39,14 @@
     }
 
     @include md {
-      height: 373px;
       margin-bottom: 13px;
+      height: 284px;
     }
 
     @include lg {
-      height: 282px;
       min-width: 497px;
+      max-width: 544px;
+      height: 231px;
       overflow: hidden;
       margin-right: 48px;
       margin-bottom: 0;
@@ -49,68 +56,33 @@
   &__content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    justify-content: space-around;
+    flex: 1;
 
-    &:hover {
-      .title {
-        color: $blue;
-      }
-      .text {
-        color: $gray-2;
-      }
+    @include md {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex: 1 0 auto;
     }
 
-    .title {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.02em;
-      color: $gray-2;
-      margin-bottom: 10px;
+    @include lg {
+      flex-direction: column;
+    }
+
+    .flow {
+      flex: 1 0 auto;
 
       @include md {
-        font-size: 24px;
-        line-height: 29px;
+        flex:  1 0 50%;
       }
 
       @include lg {
-        margin-bottom: 20px;
+        flex: 1 0 auto;
       }
     }
-
-    .text {
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.02em;
-      @include clampLine(7);
-      margin-bottom: auto;
-      color: $gray-2;
-
-      @include md {
-        @include clampLine(3);
-        font-size: 24px;
-        line-height: 29px;
-      }
-
-      @include lg {
-        @include clampLine(6);
-      }
-    }
-
-    .date {
-      font-style: italic;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: right;
-      letter-spacing: -0.02em;
+    .parametr {
       color: $blue;
-
-      @include md {
-        font-size: 22px;
-        line-height: 27px;
-      }
+      font-weight: 700;
     }
   }
 }

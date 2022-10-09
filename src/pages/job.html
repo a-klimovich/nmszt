@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html') @@include('../utils/headMapBox.html')
+
+  <body class="page__body">
+    <div class="main-wrapper job-page">
+      @@include('../components/Header/index.html')
+      @@include('../components/HeaderTitle/index.html', { 'image':
+      './assets/img/header-i-job.jpg', 'title': 'Вакансии' })
+
+      <main class="main">
+        @@include('../components/Breadcrumbs/index.html')
+
+        <div class="container">
+          <p class="text">Мы всегда рады новым сотрудникам. По всем вопросам обращайтесь в отдел кадров.</p>
+
+          <div class="job-list">
+            @@include('../components/JobCard/index.html', {
+              'image': './assets/img/job.jpg',
+              'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+              'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+              'date': 'Июнь 28, 2019',
+            })
+            @@include('../components/JobCard/index.html', {
+              'image': './assets/img/job.jpg',
+              'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+              'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+              'date': 'Июнь 28, 2019',
+            })
+            @@include('../components/JobCard/index.html', {
+              'image': './assets/img/job.jpg',
+              'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+              'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+              'date': 'Июнь 28, 2019',
+            })
+            @@include('../components/JobCard/index.html', {
+              'image': './assets/img/job.jpg',
+              'title': 'Гран При конкурса "Лучшая продукция года - 2021',
+              'text': 'Кобринский маслодельно-сыродельнйы завод стал обладателем наивысшей награды – Гран-При за стабильное качество продукции!',
+              'date': 'Июнь 28, 2019',
+            })
+          </div>
+        </div>
+        <div class="bottom-space-5"></div>
+      </main>
+      @@include('../components/Footer/index.html')
+    </div>
+  </body>
+  @@include('../utils/includes.html')
+</html>
