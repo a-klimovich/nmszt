@@ -1,6 +1,6 @@
 .breadcrumbs {
-  background-color: $gray-6;
   min-height: 8px;
+  border-bottom: solid 4px $gray-4-1;
   
   a {
     color: $gray-2;
@@ -8,7 +8,7 @@
 
   &__list {
     display: none;
-    padding: 25px 0;
+    padding: 0.7rem 0;
     list-style: none;
 
     @include md {
@@ -17,20 +17,27 @@
   }
 
   &__item {
-    @include pr(35px);
+    @include pr(25px);
     position: relative;
 
     a {
-      font-size: 22px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: $blue;
 
       @include hover {
-        color: $blue;
+        color: $brown;
       }
     }
 
-    .arrow {
+    .seporator {
       position: absolute;
-      right: 15px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $blue;
+      right: 10px;
       top: 50%;
       transform: translate(0, -40%);
     }
@@ -38,10 +45,9 @@
 
   &__item.current {
     a {
-      color: $blue;
-      font-weight: 700;
+      color: $brown;
     }
-    .arrow {
+    .seporator {
       display: none;
     }
   }
