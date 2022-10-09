@@ -1,0 +1,36 @@
+<div class="shops-list">
+  <div class="wraped-block">
+    <div class="shops-list--item shops-list__number">
+      <div class="title centered">№ п.п</div>
+      <div class="data centered">@@number</div>
+    </div>
+
+    <div class="shops-list--item shops-list__name">
+      <div class="title centered">Название</div>
+      <div class="data">@@name</div>
+    </div>
+  </div>
+
+  <div class="wraped-block">
+    <div class="shops-list--item shops-list__region">
+      <div class="title centered">Область и город</div>
+      <div class="data centered">@@region</div>
+    </div>
+
+    <div class="shops-list--item shops-list__address">
+      <div class="title centered">Адрес</div>
+      <div class="data centered">@@addres</div>
+    </div>
+  </div>
+
+  <div class="wraped-block wraped-block--fix-width">
+    <div class="shops-list--item shops-list__link">
+      <div class="title centered">На карте</div>
+      <div class="data centered">
+        @@if (mapLink !== '' && mapLink) {
+          <a href="@@mapLink" target="_blank" class="btn-open-map">На карте</a>
+        }
+      </div>
+    </div>
+  </div>
+</div>

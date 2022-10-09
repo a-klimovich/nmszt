@@ -1,24 +1,24 @@
 .us-stores {
   .text {
-    margin-bottom: 23px;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 17px;
     color: $gray-2;
+    margin-top: 28px;
+    margin-bottom: 36px;
+    text-align: center;
 
     @include md {
-      margin-bottom: 44px;
-    }
-
-    @include lg {
-      margin-bottom: 63px;
+      text-align: left;
+      margin-top: 14px;
+      margin-bottom: 17px;
     }
   }
 
   .subtitle {
     max-width: 600px;
     margin-bottom: 23px;
-    
+
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
@@ -35,20 +35,186 @@
     }
   }
 
-  .address-cards--wrapper {
-    display: grid;
-    row-gap: 16px;
-    margin-bottom: 22px;
+  .form-filter-store {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 
     @include md {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 34px 16px;
-      margin-bottom: 58px;
+      flex-direction: row;
     }
 
-    @include xl {
-      gap: 36px 25px;
-      grid-template-columns: repeat(3, 1fr);
+    .select-wrapper {
+      color: $blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include md {
+        flex-direction: row;
+      }
+
+      label {
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        
+        @include md {
+          margin-right: 1rem;
+          margin-bottom: 0;
+        }
+      }
+
+      select {
+        height: 26px;
+        border: 1px solid $gray-4;
+        border-radius: 4px;
+        min-width: 150px;
+      }
+    }
+
+    &__region {
+      margin-bottom: 20px;
+
+      @include md {
+        margin-right: 34px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .shops-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &:nth-child(2n) {
+      background-color: $gray-6;
+    }
+
+    .wraped-block {
+      display: flex;
+      flex: 1 0 100%;
+
+      &--fix-width {
+        flex: 1 0 auto;
+      }
+
+      @include md {
+       flex: 1 0 auto;
+
+        &--fix-width {
+          flex: 0 1 120px;
+        }
+      }
+    }
+
+    &--item {
+      .title {
+        @include flex-all-center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        height: 28px;
+        background-color: #D9D9D9;
+
+        @include md {
+          display: none;
+          height: 60px;
+
+          background-color: $white;
+        }
+      }
+
+      .data {
+        @include flex-all-center;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: $gray-2;
+        white-space: nowrap;
+        height: 42px;
+
+        @include md {
+          height: 70px;
+        }
+      }
+    }
+
+    &__number {
+      flex: 0 0 28px;
+
+      @include md {
+        flex: 0 0 48px;
+      }
+    }
+
+    &__name {
+      .data {
+        
+        @include md {
+          justify-content: flex-start;
+          padding-left: 2rem;
+        }
+      }
+
+      flex: 1 0 50%;
+    }
+
+    &__region {
+      flex: 1 0 35%;
+    }
+
+    &__address {
+      flex: 1 0 10%;
+    }
+
+    &__link {
+      flex: 1 0 auto;
+
+      a {
+        padding: 0.4rem 1rem;
+        background: #bdbdbd;
+        border-radius: 5px;
+        color: $white;
+
+        &:hover {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  .shops-list--desktop-table-header {
+    display: none;
+    border: 2px solid $gray-6;
+    border-right: 0;
+
+    // .shops-list--item .title {
+      
+    //   &:not(:last-child) {
+    //     border-right: 2px solid $gray-6;
+    //   }
+    // }
+
+    .shops-list__name {
+      .title {
+        padding-left: 2rem;
+      }
+    }
+
+    @include md {
+      display: flex;
+
+      .title-desktop-show {
+        @include flex-all-center;
+
+        & {
+          border-right: 2px solid $gray-6;
+        }
+      }
     }
   }
 }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 @@include('../utils/head.html')
-@@include('../utils/headMapBox.html')
 
 <body class="page__body">
   <div class="main-wrapper us-stores">
@@ -13,131 +12,91 @@
       'title': 'ГДЕ КУПИТЬ?'
       }) @@include('../components/Breadcrumbs/index.html')
 
-      <div class="container container--xl">
-        <div class="layout">
-          <div class="layout__content">
-            <p class="text">
-              Наше предприятие имеет собственную сеть фирменных магазинов,
-              в которых всегда можно приобрести по доступным ценам весь
-              ассортимент продукции ОАО "Кобринский маслодельно-сыродельный завод".
-            </p>
+      <div class="container">
+        <p class="text">
+          Молочную продукцию основных торговых марок ОАО «Лунинецкий МЗ» можно приобрести в торговых сетях и розничных магазинах г. Лунинец и других городах Беларуси.
+        </p>
 
-            <h3 class="subtitle">МЫ БУДЕМ РАДЫ ВИДЕТЬ ВАС ПО АДРЕСУ:</h3>
+        <form class="form-filter-store" action="" method="get">
+          <div class="select-wrapper form-filter-store__region">
+            <label for="selectRegion">Выбрать область</label>
+            <select name="region" id="selectRegion">
+              <option value="one">one</option>
+              <option value="two">two</option>
+            </select>
+          </div>
+          
+          <div class="select-wrapper form-filter-store__city">
+            <label for="selectCity">Выбрать город</label>
+            <select name="city" id="selectCity">
+              <option value="one">one</option>
+              <option value="two">two</option>
+            </select>
+          </div>
+        </form>
 
-            <div class="address-cards--wrapper">
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Магазин и кафетерий <br> "Верас"',
-              'address': 'г. Кобрин, ул. Николаева, 1а',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap1',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Павильон <br> "Верас №1"',
-              'address': 'г. Кобрин, пл. Матросова',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap2',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Павильон <br> "Верас №2"',
-              'address': 'г.Кобрин, ул. Дзержинского',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap3',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Павильон <br> "Верас №3"',
-              'address': 'г. Кобрин, ул. Интернациональная',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap4',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Магазин <br> "Верас"',
-              'address': 'д. Дивин, ул. Ленина',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap5',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Фирменный магазин <br> "Кобринские сыры"',
-              'address': 'г. Брест, ул. Мицкевича, д. 2/2',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap6',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Фирменный павильон <br> "Кобринские сыры"',
-              'address': 'г. Брест, ул. Гродненская, д.32/1 (район "Авторынка")',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap7',
-              })
-              @@include('../components/AddressCard/index.html', {
-              'title': 'Фирменный павильон <br> "Кобринские сыры"',
-              'address': 'г. Брест, ул. Волгоградская, 11/1 (микрорайон "Ковалево", 100 м от рынка "Лагуна")',
-              'image': './assets/img/product-1.jpg',
-              'idMap': 'storMap8',
-              })
+        <!-- show on desktop like a table header -->
+        <div class="shops-list shops-list--desktop-table-header">
+          <div class="wraped-block">
+            <div class="shops-list--item shops-list__number">
+              <div class="title title-desktop-show centered">№ п.п</div>
+            </div>
+
+            <div class="shops-list--item shops-list__name">
+              <div class="title title-desktop-show centered">Название</div>
             </div>
           </div>
-          <div class="divider"></div>
-          <div class="layout__nav pt-2">
-            @@include('../components/SectionMenu/index.html')
+
+          <div class="wraped-block">
+            <div class="shops-list--item shops-list__region">
+              <div class="title title-desktop-show centered">Область и город</div>
+            </div>
+
+            <div class="shops-list--item shops-list__address">
+              <div class="title title-desktop-show centered">Адрес</div>
+            </div>
+          </div>
+
+          <div class="wraped-block wraped-block--fix-width">
+            <div class="shops-list--item shops-list__link">
+              <div class="title title-desktop-show centered">На карте</div>
+            </div>
           </div>
         </div>
+        <!-- show on desktop like a table header END -->
+
+        <!-- List -->
+          @@loop('../components/UsStoreTable/index.html', [
+            {
+              'number': '1',
+              'name': '"Брестский торговый центр "Корона"',
+              'region': 'Брестская обл., г. Брест',
+              'addres': 'пр-т. Машерова, 16',
+              'mapLink': '#',
+            },
+            {
+              'number': '2',
+              'name': 'Магазин №30 ПФ Дружба',
+              'region': 'Брестская',
+              'addres': 'пер. Козлова, 6',
+              'mapLink': '#',
+            },
+            {
+              'number': '3',
+              'name': 'Брестский торговый центр "Корона"',
+              'region': 'Брестская',
+              'addres': 'пр-т. Машерова, 16',
+              'mapLink': '#',
+            },
+          ])
+        <!-- List END -->
+        <div class="bottom-space-5"></div>
       </div>
     </main>
-
+    
     @@include('../components/Footer/index.html')
   </div>
 </body>
-
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYS1rbGltb2YiLCJhIjoiY2w0eDV5djR4MDJ5aDNkcWZkNHltYnRueSJ9.vDioPc-AyadxGUGN-7l2OA';
-  const map = new mapboxgl.Map({
-    container: 'storMap1',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapA = new mapboxgl.Map({
-    container: 'storMap2',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapB = new mapboxgl.Map({
-    container: 'storMap3',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapC = new mapboxgl.Map({
-    container: 'storMap4',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapD = new mapboxgl.Map({
-    container: 'storMap5',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapE = new mapboxgl.Map({
-    container: 'storMap6',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapF = new mapboxgl.Map({
-    container: 'storMap7',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-  const mapG = new mapboxgl.Map({
-    container: 'storMap8',
-    style: 'mapbox://styles/mapbox/streets-v11', 
-    center: [-74.5, 40],
-    zoom: 9, 
-  });
-</script>
 
 @@include('../utils/includes.html')
 
