@@ -3,114 +3,133 @@
     margin: auto;
     height: 115px;
     margin-top: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 
     @include md {
       height: 269px;
-      margin-top: 21px;
-      margin-bottom: 25px;
+      margin-top: 25px;
+      margin-bottom: 50px;
     }
 
     @include xl {
-      height: 471px;
-      margin-top: 50px;
-      margin-bottom: 23px;
+      height: 360px;
+      margin-top: 60px;
+      margin-bottom: 107px;
     }
   }
 
-  .department-contacts {
-    padding-top: 5px;
-    margin: auto;
+  h2 {
+    color: $blue;
+    margin-bottom: 25px;
+  }
 
-    @include md {
-      width: 700px;
-      padding-top: 25px;
+  .text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-boards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    @include lg {
+      margin-bottom: 50px;
+      margin-top: 60px;
+      flex-direction: row;
     }
-    @include xxl {
-      padding-top: 23px;
-      width: 100%;
-    }
-
-    &__title {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: $gray-2;
-      font-size: 16px;
-      line-height: 20px;
-      margin-top: 10px;
-      margin-bottom: 18px;
-
-      @include md {
-        font-size: 24px;
-        line-height: 29px;
-        margin-top: 25px;
-        margin-bottom: 27px;
-      }
-      @include xxl {
-        margin-top: 40px;
-        margin-bottom: 43px;
-      }
-    }
-
-    &__grid {
+    
+    .wrap--first {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      flex: 1 0 auto;
+      gap: 30px;
+      margin-right: 0px;
+      
+      @include md {
+        flex-direction: row;
+        gap: 64px;
+      }
 
-      .contact-card {
-        margin-bottom: 7px;
-        margin-right: 14px;
+      @include lg {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 0;
+      }
+      
+      @include rwd(1046) {
+        margin-right: 30px;
+      }
+      @include rwd(1149) {
+        margin-right: 64px;
+      }
+    }
 
-        @include md {
-          margin-right: 7px;
-          margin-bottom: 7px;
+    .wrap--second {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      flex: 1 0 auto;
+      margin-bottom: 30px;
+      
+      @include md {
+        gap: 64px;
+        flex-direction: row;
+      }
+
+      @include lg {
+        margin-bottom: 0;
+        gap: 0;
+      }
+      @include rwd(1046) {
+        gap: 30px;
+      }
+      @include rwd(1149) {
+        gap: 64px;
+      }
+    }
+
+    .board-card {
+      display: flex;
+      flex-direction: column;
+      border: 3px solid $gray-5;
+      border-radius: 12px;
+      padding: 16px 14px;
+      width: 100%;
+      flex: 1 0 33.3333%;
+
+      .title {
+        display: flex;
+        align-items: center;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $blue;
+        margin-bottom: 23px;
+        padding-left: 60px;
+
+        svg {
+          margin-right: 0.74rem;
         }
+      }
 
-        @include xxl {
-          margin-right: 15px;
-          margin-bottom: 15px;
+      .content {
+        font-size: 14px;
+        line-height: 22px;
+
+        ul li{
+          margin-bottom: 0.77rem;
         }
       }
     }
 
-    &__descr {
-      width: 233px;
-      margin: auto;
-      margin-bottom: 15px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: $gray-2;
-
-      @include md {
-        width: 349px;
-        margin-bottom: 42px;
-        font-size: 24px;
-        line-height: 29px;
-      }
-      @include xxl {
-        margin-bottom: 80px;
-      }
-    }
-    &__email {
-      display: block;
-      margin-bottom: 44px;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
-      letter-spacing: -0.02em;
-      color: $gray-2;
-
-      @include md {
-        margin-bottom: 82px;
-        font-size: 24px;
-        line-height: 29px;
-      }
-      @include xxl {
-        margin-bottom: 72px;
+    .board-card--address {
+      .content {
+        margin-bottom: 20px;
       }
     }
   }
