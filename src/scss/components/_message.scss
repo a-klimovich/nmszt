@@ -1,0 +1,52 @@
+.accapt {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  height: 188.24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #e0e0e0;
+  border-radius: 13px;
+  background-color: $white;
+  overflow: hidden;
+  z-index: 9999;
+
+  .show {
+    @include flex-all-center;
+  }
+
+  @include md {
+    max-width: 620px;
+    height: 389.02px;
+  }
+
+  .message-ok {
+    @include flex-all-center;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $blue;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .bg-decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50%;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    @include md {
+      max-width: 100%;
+    }
+  }
+}

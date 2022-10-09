@@ -1,0 +1,109 @@
+.feedback-page {
+  .feedback {
+    .text {
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $blue;
+
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-contact {
+      border: 2px solid #e0e0e0;
+      border-radius: 13px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+      input,
+      textarea {
+        background: #e0e0e0;
+        border-radius: 9px;
+        padding: 12px 18px 11px 18px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        border: none;
+        width: 100%;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          font-style: italic;
+          color: #545250;
+        }
+      }
+
+      input {
+        height: 56px;
+      }
+
+      input[type="file"] {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0%;
+      }
+
+      input::file-selector-button {
+        color: $white;
+        background-color: $brown;
+        border-radius: 5px;
+        border: none;
+        padding: 15px;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 13px;
+        line-height: 16px;
+        font-style: italic;
+      }
+
+      .input-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -20px;
+        margin-right: -20px;
+
+        .input-col {
+          padding-right: 20px;
+          padding-left: 20px;
+          flex: 1 0 100%;
+
+          @include md {
+            flex: 1 0 50%;
+          }
+        }
+      }
+
+      .sand-form {
+        border: solid 2px $blue;
+        background-color: $white;
+        padding: 16px 57px;
+        align-self: flex-start;
+        color: $blue;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          color: $white;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}

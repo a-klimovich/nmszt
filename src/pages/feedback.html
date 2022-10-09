@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html') @@include('../utils/headMapBox.html')
+
+  <body class="page__body">
+    <div class="main-wrapper feedback-page">
+      @@include('../components/Header/index.html')
+      @@include('../components/HeaderTitle/index.html', { 'image':
+      './assets/img/header-i-job.jpg', 'title': 'Вакансии' })
+
+      <main class="main">
+        @@include('../components/Breadcrumbs/index.html')
+
+        <div class="container">
+          <div class="feedback">
+            <div class="text">
+              Граждане и индивидуальные предприниматели, а также юридические
+              лица могут направить электронное обращение ОАО «Лунинецкий МЗ».
+              Все обращения рассматриваются в соответствии с требованиями
+              законодательства — Закона Республики Беларусь №300-3 от 18 июля
+              2011 года ”Об обращениях граждан и юридических лиц“. Внимательно
+              заполните форму обращения для граждан, согласно требованиям к
+              содержанию. Обращаем ваше внимание, что все поля, отмеченные «*»
+              являются обязательными для заполнения. Вы также можете прикрепить
+              к своему письму документ в одном из форматов (.png, .jpg, .jpeg,
+              .pdf, .doc, .docx), размер которого не должен превышать 1Mb.
+            </div>
+
+            <div class="form-contact-wrapper">
+              <h3 class="title">Форма обращения</h3>
+
+              <form class="form-contact" action="post">
+                <input type="text" placeholder="Фамилия, Имя, Отчество*">
+                
+                <input type="text" placeholder="Адрес места жительства (места пребывания)*">
+                
+                <div class="input-row">
+                  <div class="input-col">
+                    <input type="email" placeholder="Ваш e-mail *">
+                  </div>
+                  <div class="input-col">
+                    <input type="tel" placeholder="Телефон для связи*">
+                  </div>
+                </div>
+                
+                <input type="text" placeholder="Тема обращения*">
+                
+                <textarea name="message" cols="30" rows="10" placeholder="Сообщение*"></textarea>
+                
+                <p>Прикрепить файл</p>
+                <input type="file" name="file" id="addFileToMessage" accept=".png, .jpg, .jpeg, .pdf, .doc, .docx">
+
+                <button type="submit" class="sand-form">
+                  Отправить
+                </button>
+              </form>
+
+              <!-- component -->
+              <div class="accapt">
+                <div class="message-ok">
+                  <span>@@include('../assets/svg/accapt.svg')</span>
+                  <p>Ваше сообщение отправлено</p>
+                </div>
+                <span class="bg-decor">
+                  @@include('../assets/svg/bg-cow-decor.svg')
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-space-5"></div>
+      </main>
+      @@include('../components/Footer/index.html')
+    </div>
+  </body>
+  @@include('../utils/includes.html')
+</html>
