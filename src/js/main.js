@@ -173,5 +173,23 @@
         },
       ]
     });
+
+    // PRODUCT ITEM SLIDERs
+    $('#productBigImage').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      asNavFor: '#productSmallImage',
+      arrows: true,
+    });
+
+    $('#productSmallImage').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '#productBigImage',
+      dots: false,
+      focusOnSelect: true,
+      arrows: false,
+    });
   });
 })();
