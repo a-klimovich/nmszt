@@ -1,0 +1,171 @@
+.price-list-page {
+  .breadcrumbs {
+    margin-bottom: 40px;
+  }
+  
+  .pagination {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .download-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .download {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      svg {
+        max-width: 45px;
+        margin-right: 1rem;
+
+        path {
+          fill: $brown;
+        }
+      }
+
+      &:hover {
+        svg path {
+          fill: $blue;
+        }
+      }
+    }
+
+    @include md {
+      flex-direction: row;
+      margin-bottom: 60px;
+    }
+  }
+
+  .sub-text {
+    margin: 40px 0;
+  }
+}
+
+.price-list, .price-list-th {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 25px;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+
+    @include md {
+      flex-wrap: nowrap;
+    }
+
+    .item-row {
+      display: flex;
+      flex: auto;
+    }
+
+    .item-col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &.id-number {
+        width: 58px;
+      }
+
+      &.img {
+        max-width: 110px;
+        
+        @include md {
+          max-width: 124px;
+        }
+      }
+    }
+
+    .item-head {
+      background-color: $gray-5;
+      color: $gray-2;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      height: 48px;
+      @include flex-all-center;
+      padding: 0 7px;
+
+      &.hide-mobile {
+        display: none;
+      }
+
+      @include md {
+        &.hide-desktop {
+          display: none;
+        }
+        &.hide-mobile {
+          display: flex;
+        }
+      }
+
+      &.bg-none {
+        background-color: transparent;
+      }
+
+      &.description {
+        @include md {
+          max-width: 204px;
+          min-width: 180px;
+        }
+
+        @include lg {
+          max-width: 500px;
+          min-width: 450px;
+        }
+      }
+
+      @include md {
+        padding: 0 14px;
+      }
+    }
+
+    .item-body {
+      @include flex-all-center;
+      flex-grow: 3;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      min-height: 42px;
+      padding: 0 7px;
+
+      img {
+        max-width: 102px;
+      }
+
+      @include md {
+        padding: 0 14px;
+
+        img {
+          max-width: 124px;
+        }
+      }
+
+      &.description {
+        min-height: 110px;
+        height: auto;
+        padding: 7px;
+
+        @include md {
+          max-width: 204px;
+          min-width: 180px;
+          padding: 14px;
+        }
+
+        @include lg {
+          max-width: 500px;
+          min-width: 450px;
+        }
+      }
+    }
+  }
+}

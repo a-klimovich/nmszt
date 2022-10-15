@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+<body class="page__body">
+  <div class="main-wrapper price-list-page">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/header-img-7.jpg',
+        'title': 'Прайс-лист'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="container">
+
+
+        <!-- header table -->
+        <div class="price-list-th">
+          <div class="price-list__item">
+            <div class="item-row">
+              <div class="item-col id-number">
+                <div class="item-head bg-none hide-mobile">№ п.п</div>
+              </div>
+              <div class="item-col img">
+                <div class="item-head bg-none hide-mobile">Изображение</div>
+              </div>
+              <div class="item-col">
+                <div class="item-head description bg-none hide-mobile">Наименование продукции</div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div class="item-col">
+                <div class="item-head bg-none hide-mobile">Срок годности</div>
+              </div>
+              <div class="item-col">
+                <div class="item-head bg-none hide-mobile">Ед. изм </div>
+              </div>
+            </div>
+
+            <div class="item-row">
+              <div class="item-col">
+                <div class="item-head bg-none hide-mobile">Склад изготовителя</div>
+              </div>
+              <div class="item-col">
+                <div class="item-head bg-none hide-mobile">Франко-станция назначения</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- body table -->
+        <div class="price-list">
+          @@include('../components/PriceListItem/index.html', {
+            'No': '1',
+            'image': '../assets/img/price-list-item.jpg',
+            'name': 'Питьевое молоко «А2» пастеризованное м.д.ж. 3,6%, 0,75 л, фасованное в стеклянную бутылку ТМ «АСАБЛIВАЕ»	',
+            'bestDate': '10 сут.',
+            'unit': '0,75 л',
+            'warehouse': '3,00',
+            'station': '3,09',
+          })
+          @@include('../components/PriceListItem/index.html', {
+            'No': '1',
+            'image': '../assets/img/price-list-item.jpg',
+            'name': 'Питьевое молоко «А2» пастеризованное м.д.ж. 3,6%, 0,75 л, фасованное в стеклянную бутылку ТМ «АСАБЛIВАЕ»	',
+            'bestDate': '10 сут.',
+            'unit': '0,75 л',
+            'warehouse': '3,00',
+            'station': '3,09',
+          })
+          @@include('../components/PriceListItem/index.html', {
+            'No': '1',
+            'image': '../assets/img/price-list-item.jpg',
+            'name': 'Питьевое молоко «А2» пастеризованное м.д.ж. 3,6%, 0,75 л, фасованное в стеклянную бутылку ТМ «АСАБЛIВАЕ»	',
+            'bestDate': '10 сут.',
+            'unit': '0,75 л',
+            'warehouse': '3,00',
+            'station': '3,09',
+          })
+          @@include('../components/PriceListItem/index.html', {
+            'No': '1',
+            'image': '../assets/img/price-list-item.jpg',
+            'name': 'Питьевое молоко «А2» пастеризованное м.д.ж. 3,6%, 0,75 л, фасованное в стеклянную бутылку ТМ «АСАБЛIВАЕ»	',
+            'bestDate': '10 сут.',
+            'unit': '0,75 л',
+            'warehouse': '3,00',
+            'station': '3,09',
+          })
+        </div>
+
+        <!-- paginatoin -->
+        @@include('../components/Pagination/index.html')
+
+        <div class="sub-text">
+          <p>* Стоимость молочной продукции указана в ознакомительных целях. Более точную информацию можно получить у наших консультантов.</p>
+        <p><a href="mailto:Lncmilk@brest.by">Lncmilk@brest.by</a> <a href="tel:+375164727788">+375164727788</a></p>
+        </div>
+      
+        <div class="download-list">
+          <a href="#" download class="download">
+            <span class="download-icon">@@include('../assets/download.svg')</span>
+            СКАЧАТЬ ДОКУМЕНТАЦИЮ
+          </a>
+          <a href="#" download class="download">
+            <span class="download-icon">@@include('../assets/download.svg')</span>
+            СКАЧАТЬ ДОКУМЕНТАЦИЮ
+          </a>
+          <a href="#" download class="download">
+            <span class="download-icon">@@include('../assets/download.svg')</span>
+            СКАЧАТЬ ДОКУМЕНТАЦИЮ
+          </a>
+        </div>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+</html>
