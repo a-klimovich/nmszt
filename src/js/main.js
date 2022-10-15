@@ -104,6 +104,15 @@
           settings: {
             dots: true,
             arrows: false,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+          }
+        },
+        {
+          breakpoint: 996,
+          settings: {
+            dots: true,
+            arrows: false,
             slidesToShow: 3,
             slidesToScroll: 3,
           }

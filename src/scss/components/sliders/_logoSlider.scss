@@ -1,31 +1,30 @@
 .fluid-wrapper.bg-slider-logo {
-  background-image: url('../assets/sliderlogobg-3.jpg');
-  @include bg-cover;
-  
-  @include md {
-    background-image: url('../assets/sliderlogobg-2.jpg');
-  }
-  
-  @include xl {
-    background-image: url('../assets/sliderlogobg-1.jpg');
-  }
+  background-color: $gray-5;
 }
 
 #logoSlider {
-  padding: 76px 0 94px;
+  padding: 20px 0 35px;
 
   .slide {
-    width: 212px;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-all-center;
+
+    width: 185px;
+    height: 120px;
+    
     margin: 0 auto;
-    border: 1px solid rgba(255, 255, 255, 0.34);
+    border: 1px solid $white;
+    cursor: pointer;
+
+    img {
+      filter: grayscale(1);
+    }
+
+    &:hover img {
+      filter: grayscale(0);
+    }
   }
 
   .slick-dots {
     margin-top: 21px;
-    
   }
 }

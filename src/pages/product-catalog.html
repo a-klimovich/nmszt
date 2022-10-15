@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+<body class="page__body">
+  <div class="main-wrapper production-catalog">
+    @@include('../components/Header/index.html')
+  
+    <main class="main">
+      @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/header-img-7.jpg',
+        'title': 'Каталог продукции'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <div class="fluid-wrapper bg-slider-logo">
+        <div class="container">
+          @@include('../components/Sliders/LogoSlider.html')
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="production-catalog-menu list-reset">
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-1.svg')</span>
+              <span class="text">Молоко</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-2.svg')</span>
+              <span class="text">Кефир</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-3.svg')</span>
+              <span class="text">Сметана</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-4.svg')</span>
+              <span class="text">Йогурт и крема</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-5.svg')</span>
+              <span class="text">Масло  сливочное</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-6.svg')</span>
+              <span class="text">Творог</span>
+            </a>
+          </li>
+          <li class="menu-list-item">
+            <a href="#">
+              <span class="icon">@@include('../assets/svg/icon-7.svg')</span>
+              <span class="text">Сухие молочные продукты</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr class="menu-botom-hr">
+
+      <div class="container">
+        <div class="production-catalog-greed">
+          <a href="#" class="catalog-card">
+            <div class="catalog-card__image">
+              <img src="../assets/img/prod-milk-asblivae.jpg" alt="catalog production item">
+              <div class="marker-wrapper soon"></div>
+              <span class="marker-text soon">СКОРО В ПРОДАЖЕ</span>
+            </div>
+
+            <h4 class="title">Питьевое молоко А2 3,6% еееее</h4>
+
+            <p class="subtitle">0,75 л</p>
+          </a>
+          <a href="#" class="catalog-card">
+            <div class="catalog-card__image">
+              <img src="../assets/img/prod-milk-asblivae.jpg" alt="catalog production item">
+              <div class="marker-wrapper stock"></div>
+              <span class="marker-text stock">АКЦИЯ</span>
+            </div>
+
+            <h4 class="title">Питьевое молоко А2 3,6% еееее</h4>
+
+            <p class="subtitle">0,75 л</p>
+          </a>
+          <a href="#" class="catalog-card">
+            <div class="catalog-card__image">
+              <img src="../assets/img/prod-milk-asblivae.jpg" alt="catalog production item">
+              <div class="marker-wrapper new"></div>
+              <span class="marker-text new">НОВИНКА</span>
+            </div>
+
+            <h4 class="title">Питьевое молоко А2 3,6% еееее</h4>
+
+            <p class="subtitle">0,75 л</p>
+          </a>
+          <a href="#" class="catalog-card">
+            <div class="catalog-card__image">
+              <img src="../assets/img/prod-milk-asblivae.jpg" alt="catalog production item">
+            </div>
+
+            <h4 class="title">Питьевое молоко А2 3,6% еееее</h4>
+
+            <p class="subtitle">0,75 л</p>
+          </a>
+          <a href="#" class="catalog-card">
+            <div class="catalog-card__image">
+              <img src="../assets/img/prod-milk-asblivae.jpg" alt="catalog production item">
+            </div>
+
+            <h4 class="title">Питьевое молоко А2 3,6% еееее</h4>
+
+            <p class="subtitle">0,75 л</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- paginatoin -->
+      @@include('../components/Pagination/index.html')
+
+      <div class="container">
+        <p class="text-about">
+          Питьевое молоко А2 3,6% торговой марки «Асаблівае» – это особое отборное молоко, которое содержит только лишь белок А2. Оно изготавливается из пастеризованного коровьего молока, получаемого от коров с двойным геном бета-казеина A2. Регулярное употребление этого молока способствует укреплению иммунитета и восстановлению сил.
+        </p>
+      </div>
+    </main>
+
+    @@include('../components/Footer/index.html')
+  </div>
+</body>
+
+@@include('../utils/includes.html')
+</html>
