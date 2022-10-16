@@ -105,13 +105,45 @@
     });
 
     $("#sliderProduct").slick({
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       dots: true,
       arrows: false,
       responsive: [
         {
           breakpoint: 980,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 555,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+          },
+        },
+      ],
+    });
+
+    $("#achivSlider").slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      centerPadding: '60px',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 768,
           settings: {
             slidesToScroll: 1,
             slidesToShow: 1,

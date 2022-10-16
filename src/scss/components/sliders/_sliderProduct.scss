@@ -20,26 +20,26 @@
 
     &__img {
       margin-bottom: 38px;
+      padding: 10px;
+      border: 1px solid $white;
 
       img {
         width: 100%;
       }
-      
+
       @include md {
         margin-bottom: 18px;
       }
     }
 
     h4 {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 20px;
       line-height: 24px;
-      color: $blue;
+      color: $white;
       margin-bottom: 29px;
 
       @include md {
-        font-size: 22px;
-        line-height: 27px;
         margin-bottom: 14px;
       }
     }
@@ -58,34 +58,13 @@
 }
 
 .fluid-wrapper.bg-slider-logo-1 {
-  background-image: url('../assets/img/slider-newest-product-sm.jpg');
+  background-image: url("../assets/prod-bg-blue.jpg");
   @include bg-cover;
   padding-top: 32px;
   padding-bottom: 92px;
 
-  h2 {
-    margin-bottom: 62px;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    color: $white;
-
-    @include md {
-      font-size: 36px;
-      line-height: 44px;
-    }
-    @include md {
-      font-size: 36px;
-      line-height: 44px;
-    }
-  }
-
   @include md {
-    background-image: url('../assets/img/slider-newest-product-md.jpg');
-    padding-top: 62px;
-    padding-bottom: 144px;
-  }
-  @include lg {
-    background-image: url('../assets/img/slider-newest-product-lg.jpg');
+    padding-top: 40px;
+    padding-bottom: 100px;
   }
 }

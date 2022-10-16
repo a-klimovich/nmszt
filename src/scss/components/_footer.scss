@@ -1,12 +1,12 @@
 .footer {
   color: $white;
+  background-color: #007DB6;
   
   a {
     color: $white;
   }
 
   .wrapper__navigate {
-    background-image: url("../assets/footer-bg.jpg");
     padding-top: 25px;
     padding-bottom: 32px;
     margin-bottom: 10px;
@@ -17,12 +17,6 @@
     }
     @include xl {
       padding-bottom: 44px;
-    }
-
-    @include bg-cover;
-
-    @media screen and (max-width: 768px) {
-      background-image: url("../assets/footer-bg-sm.jpg");
     }
 
     .navigate {

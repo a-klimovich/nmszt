@@ -1,3 +1,139 @@
 .index-page {
+  h2.section-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+
+  .bg-slider-logo-2 {
+    background-image: url('../assets/achive-bg-main-page.jpg');
+    @include bg-cover;
+  }
+
+  .section-news {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    &__list-item {
+      flex: 1 0 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+
+      @include md {
+        flex: 1 0 50%;
+        max-width: 50%;
+      }
+      @include lg {
+        flex: 1 0 33.333%;
+        max-width: 33.3%;
+      }
+
+      .date {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $blue;
+        margin-bottom: 8px;
+      }
+
+      .text {
+        color: $gray-2;
+        padding-right: 2rem;
+        @include clampLine(2);
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-self: flex-end;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $blue;
+      border: 2px solid #007db6;
+      border-radius: 10px;
+      padding: 15px 34px;
+    }
+  }
+
+  .section__achive {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 33px;
+
+    #achivSlider {
+      margin-bottom: 64px;
   
+      .img {
+        @include flex-all-center;
+        border: 1px solid $white;
+        padding: 5px;
+        max-width: fit-content;
+        margin: 0 auto;
+
+        img {
+          height: 232px;
+        }
+      }
+    }
+
+    .section-news__link {
+      align-self: center;
+      background-color: $white;
+    }
+  }
+
+  .section-about-company {
+    display: flex;
+
+    &__image {
+      width: 500px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 0 50%;
+      margin-left: 70px;
+
+      a {
+        align-self: center;
+      }
+    }
+  }
+
+  .section-links {
+    display: flex;
+    flex-wrap: wrap;
+      justify-content: space-around;
+    padding:  70px 0;
+    width: 100%;
+
+    a {
+      display: block;
+      margin-bottom: 25px;
+
+      @include md {
+        width: 50%;
+      }
+
+      @include lg {
+        width: 25%;
+      }
+    }
+  }
 }
