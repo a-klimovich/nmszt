@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @@include('../utils/head.html')
+
+  <body class="page__body">
+    <div class="main-wrapper news-list-page">
+      @@include('../components/Header/index.html') @@include('../components/HeaderTitle/index.html', { 
+        'image': './assets/img/news.jpg', 'title': 'Аудиторское заключение по консолидированной финансовой отчётности ОАО «Лунинецкий МЗ» за 2021 год'
+      })
+      @@include('../components/Breadcrumbs/index.html')
+
+      <main class="main">
+        <div class="container">
+          <div class="some-btn-list">
+            <a class="some-btn-list__item" href="#">Новости</a>
+            <a class="some-btn-list__item" href="#">Заводы</a>
+            <a class="some-btn-list__item" href="#">Новости</a>
+            <a class="some-btn-list__item" href="#">Заводы</a>
+            <a class="some-btn-list__item" href="#">Новости</a>
+            <a class="some-btn-list__item" href="#">Заводы</a>
+            <a class="some-btn-list__item" href="#">Новости</a>
+            <a class="some-btn-list__item" href="#">Заводы</a>
+            <a class="some-btn-list__item" href="#">Новости</a>
+            <a class="some-btn-list__item" href="#">Заводы</a>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="news-list">
+              <div class="news-list__item-card">
+                <div class="image">
+                  <img src="./assets/img/gluho.jpg" alt="" />
+                </div>
+  
+                <div class="content">
+                  <h3 class="title">
+                    Аудиторское заключение по консолидированной финансовой отчётности ОАО «Лунинецкий МЗ» за 2021 год
+                  </h3>
+                  <div class="date">Июнь 28, 2019</div>
+                  <div class="text">
+                    ОАО «Лунинецкий МЗ» приняло участие в международной агропромышленной выставке «Белагро-2022»,
+                    проводимой в период с 7 по 11 июня 2022 г. на территории выставочного центра Китайско-Белорусского
+                    индустриального парка «Великий камень» на коллективном стенде объединения. На выставке проходил
+                    народный конкурс-дегустация «Чемпион вкуса». По результатам
+                  </div>
+                  <div class="links">
+                    <a class="some-btn-list__item" href="#">Новости</a>
+                    <a class="some-btn-list__item" href="#">Заводы</a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-list__item-card">
+                <div class="image">
+                  <img src="./assets/img/gluho.jpg" alt="" />
+                </div>
+  
+                <div class="content">
+                  <h3 class="title">
+                    Аудиторское заключение по консолидированной финансовой отчётности ОАО «Лунинецкий МЗ» за 2021 год
+                  </h3>
+                  <div class="date">Июнь 28, 2019</div>
+                  <div class="text">
+                    ОАО «Лунинецкий МЗ» приняло участие в международной агропромышленной выставке «Белагро-2022»,
+                    проводимой в период с 7 по 11 июня 2022 г. на территории выставочного центра Китайско-Белорусского
+                    индустриального парка «Великий камень» на коллективном стенде объединения. На выставке проходил
+                    народный конкурс-дегустация «Чемпион вкуса». По результатам
+                  </div>
+                  <div class="links">
+                    <a class="some-btn-list__item" href="#">Новости</a>
+                    <a class="some-btn-list__item" href="#">Заводы</a>
+                  </div>
+                </div>
+              </div>
+              <div class="news-list__item-card">
+                <div class="image">
+                  <img src="./assets/img/gluho.jpg" alt="" />
+                </div>
+  
+                <div class="content">
+                  <h3 class="title">
+                    Аудиторское заключение по консолидированной финансовой отчётности ОАО «Лунинецкий МЗ» за 2021 год
+                  </h3>
+                  <div class="date">Июнь 28, 2019</div>
+                  <div class="text">
+                    ОАО «Лунинецкий МЗ» приняло участие в международной агропромышленной выставке «Белагро-2022»,
+                    проводимой в период с 7 по 11 июня 2022 г. на территории выставочного центра Китайско-Белорусского
+                    индустриального парка «Великий камень» на коллективном стенде объединения. На выставке проходил
+                    народный конкурс-дегустация «Чемпион вкуса». По результатам
+                  </div>
+                  <div class="links">
+                    <a class="some-btn-list__item" href="#">Новости</a>
+                    <a class="some-btn-list__item" href="#">Заводы</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <!-- paginatoin -->
+          @@include('../components/Pagination/index.html')
+        </div>
+      </main>
+
+      @@include('../components/Footer/index.html')
+    </div>
+  </body>
+  @@include('../utils/includes.html')
+</html>

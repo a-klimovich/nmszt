@@ -6,11 +6,7 @@
     margin-bottom: 32px;
     margin-top: 25px;
   }
-  @include xl {
-    margin-bottom: 40px;
-    margin-top: 53px;
-  }
-
+  
   &__title {
     font-weight: 600;
     font-size: 20px;

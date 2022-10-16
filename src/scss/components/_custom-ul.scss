@@ -1,0 +1,15 @@
+.custom-ul {
+  list-style: none;
+
+  .custom-ul-item {
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 30px;
+
+    span.icon {
+      position: absolute;
+      top: 3px;
+      left: 0px;
+    }
+  }
+}

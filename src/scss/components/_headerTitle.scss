@@ -16,21 +16,22 @@
   }
 
   h1 {
-    width: 210px;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     margin: 0;
-   font-weight: 700;
+    font-weight: 700;
     font-size: 36px;
     line-height: 44px;
     color: $white;
     text-align: center;
+    @include clampLine(2);
 
     @include md {
-      width:320px;
+      @include clampLine(4);
       font-size: 36px;
       line-height: 44px;
     }
