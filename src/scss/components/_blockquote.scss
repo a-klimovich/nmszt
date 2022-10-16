@@ -1,24 +1,20 @@
+$paddingBkLg: 80px;
+
 blockquote {
   position: relative;
   display: flex;
   flex-direction: column;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: -0.02em;
+  background-color: $gray-6;
   color: $gray-2;
-  padding-left: calc(17px + 4px);
+  letter-spacing: -0.02em;
   transition: 0.2s border ease-in-out;
   margin-bottom: 10px;
-
-  @include md {
-    font-size: 24px;
-    line-height: 29px;
-    padding-left: calc(38px + 11px);
-  }
+  padding-left: calc(($paddingBkLg / 2) + 11px);
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
 
   @include xl {
-    padding-left: calc(67px + 12px);
+    padding-left: calc($paddingBkLg + 12px);
   }
 
   &:before {
@@ -28,54 +24,42 @@ blockquote {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: $gray-6;
-    width: 17px;
-
-    @include md {
-      font-size: 24px;
-      line-height: 29px;
-      padding-left: 38px;
-    }
+    background-color: $blue;
+    padding-left: calc($paddingBkLg / 2);
 
     @include xl {
-      padding-left: 67px;
+      padding-left: $paddingBkLg;
     }
   }
 
-  &:after {
-    content: "“";
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 37px;
-    width: 15px;
-    text-align: center;
+  .decor {
     position: absolute;
-    top: 0;
-    left: 0;
-    color: $gray-3;
-
-    @include md {
-      width: 38px;
-      font-size: 64px;
-      line-height: 78px;
+    top: 5px;
+    left: calc(($paddingBkLg / 2) / 2);
+    transform: translateX(-50%);
+    
+    @include xl {
+      top: 10px;
+      left: calc($paddingBkLg / 2);
     }
 
-    @include xl {
-      width: 67px;
+    svg {
+      width: 12.53px;
+      height: 8.57px;
+
+      @include xl {
+        width: 30.07px;
+        height: 20.57px;
+      }
     }
   }
 
   cite {
     text-align: right;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 16px;
     letter-spacing: -0.02em;
     color: $blue;
-
-    @include md {
-      font-size: 22px;
-      line-height: 27px;
-    }
   }
 }

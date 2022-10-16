@@ -1,6 +1,7 @@
 .news-item-title-and-date {
   margin-bottom: 14px;
   margin-top: 6px;
+
   @include md {
     margin-bottom: 32px;
     margin-top: 25px;
@@ -11,37 +12,33 @@
   }
 
   &__title {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    color: $black;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: $blue;
     margin-bottom: 18px;
     text-align: center;
 
     @include md {
+      max-width: 86%;
       text-align: left;
-      font-size: 36px;
-      line-height: 43px;
-    }
-    @include xl {
-      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 
   &__date {
     font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: right;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
     letter-spacing: -0.02em;
-    color: $blue;
+    color: $brown;
     font-style: italic;
 
     @include md {
       text-align: left;
-      font-size: 22px;
-      line-height: 26px;
     }
   }
-
 }
