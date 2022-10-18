@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
     @include md {
       justify-content: space-between;
     }
@@ -19,53 +19,46 @@
   }
 
   &__item {
-    border-bottom: 2px solid #c4c4c4;
-    margin-bottom: 10px;
+    border-bottom: 2px solid $gray-6;
+    margin-bottom: 0;
     margin-right: 2px;
 
     &.active {
-      border-bottom-color: #007DB6;
+      border-bottom-color: $brown;
     }
-    
+
     &:first-child {
       @include xl {
-        border-top: 2px solid #c4c4c4;
+        border-top: 2px solid $gray-6;
       }
     }
 
     @include hover {
-      border-bottom-color: #007DB6;
+      border-bottom-color: $brown;
     }
-    
+
     @include without-last {
       @include lg {
         margin-right: 10px;
       }
     }
-    
+
     a {
       display: inline-flex;
       height: 100%;
       padding: 4px 0;
       width: 100%;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 14px;
       line-height: 17px;
-      color: $black;
+      color: $blue;
 
       &:hover {
-        color: $black !important;
-      }
-
-      @include md {
-        font-size: 18px;
-        line-height: 22px;
+        color: $brown !important;
       }
 
       @include lg {
-        font-size: 22px;
-        line-height: 22px;
-        padding: 20px 0;
+        padding: 10px 0;
       }
     }
 
@@ -76,6 +69,8 @@
     }
 
     @include md {
+      margin-bottom: 0;
+
       @include without-last {
         margin-right: 40px;
       }

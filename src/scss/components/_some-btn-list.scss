@@ -12,8 +12,13 @@
     line-height: 16px;
     color: $blue;
     @include flex-all-center;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    
+    @include md {
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
 
     &:hover {
       color: $brown;

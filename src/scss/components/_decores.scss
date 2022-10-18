@@ -1,0 +1,30 @@
+.main-section-decore {
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
+.page-decore {
+  position: absolute;
+  z-index: -1;
+
+  svg {
+    width: 320px;
+    height: 93.08px;
+
+    @include md {
+      width: 518.22px;
+      height: 150.74px;
+    }
+  }
+
+  &--bottom {
+    bottom: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+}

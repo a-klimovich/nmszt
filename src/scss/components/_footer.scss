@@ -10,6 +10,8 @@
     padding-top: 25px;
     padding-bottom: 32px;
     margin-bottom: 10px;
+    position: relative;
+
     @include md {
       padding-top: 40px;
       padding-bottom: 25px;
@@ -17,6 +19,12 @@
     }
     @include xl {
       padding-bottom: 44px;
+    }
+
+    .decore {
+      position: absolute;
+      bottom: 0%;
+      left: 40%;
     }
 
     .navigate {
@@ -76,6 +84,12 @@
             svg {
               max-width: 36px;
               height: 36px;
+            }
+
+            &:hover {
+              svg path {
+                fill: #194262;
+              }
             }
           }
         }

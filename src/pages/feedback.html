@@ -6,7 +6,7 @@
     <div class="main-wrapper feedback-page">
       @@include('../components/Header/index.html')
       @@include('../components/HeaderTitle/index.html', { 'image':
-      './assets/img/header-i-job.jpg', 'title': 'Вакансии' })
+      './assets/img/header-feedbeck.jpg', 'title': 'Электронное обращение' })
 
       <main class="main">
         @@include('../components/Breadcrumbs/index.html')
@@ -53,10 +53,14 @@
                 <button type="submit" class="sand-form">
                   Отправить
                 </button>
+
+                <div class="form-decore">
+                  @@include('../assets/svg/bg-cow-decor.svg')
+                </div>
               </form>
 
-              <!-- component -->
-              <div class="accapt">
+              <!-- modal accept message -->
+              <div class="accapt show">
                 <div class="message-ok">
                   <span>@@include('../assets/svg/accapt.svg')</span>
                   <p>Ваше сообщение отправлено</p>

@@ -6,7 +6,7 @@
     <div class="main-wrapper contacts-page">
       @@include('../components/Header/index.html')
       @@include('../components/HeaderTitle/index.html', { 'image':
-      './assets/img/header-img-3.jpg', 'title': 'КОНТАКТЫ' })
+      './assets/img/contacts.jpg', 'title': 'КОНТАКТЫ' })
       <main class="main">
         @@include('../components/Breadcrumbs/index.html')
 
@@ -17,7 +17,7 @@
           <h2 class="centered">
             Открытое акционерное общество «Лунинецкий молочный завод»
           </h2>
-          <p class="centered text">ОАО «Лунинецкий МЗ»</p>
+          <p class="centered text"><b>ОАО «Лунинецкий МЗ»</b></p>
 
           <div class="contacts-boards">
             <div class="wrap wrap--first">
@@ -44,6 +44,7 @@
                 </div>
               </div>
             </div>
+
             <div class="wrap wrap--second">
               <div class="board-card board-card--phones">
                 <div class="title">
@@ -84,6 +85,9 @@
                 </div>
               </div>
               <div class="board-card board-card--requisites">
+                <div class="decore-img">
+                  @@include('../assets/svg/contact-decor-img.svg')
+                </div>
                 <div class="title">
                   <span class="icon">@@include('../assets/svg/tender-doc.svg')</span>
                   <p>Реквизиты</p>
@@ -110,6 +114,10 @@
           </div>
 
           <div id="contactsMap" class="contacts-page__map"></div>
+        </div>
+
+        <div class="main-section-decore">
+          @@include('../assets/svg/decore-page-img.svg')
         </div>
       </main>
       @@include('../components/Footer/index.html')

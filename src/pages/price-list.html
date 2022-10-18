@@ -7,7 +7,7 @@
   
     <main class="main">
       @@include('../components/HeaderTitle/index.html', { 
-        'image': './assets/img/header-img-7.jpg',
+        'image': './assets/img/price-list.jpg',
         'title': 'Прайс-лист'
       })
       @@include('../components/Breadcrumbs/index.html')
@@ -16,39 +16,16 @@
 
 
         <!-- header table -->
-        <div class="price-list-th">
-          <div class="price-list__item">
-            <div class="item-row">
-              <div class="item-col id-number">
-                <div class="item-head bg-none hide-mobile">№ п.п</div>
-              </div>
-              <div class="item-col img">
-                <div class="item-head bg-none hide-mobile">Изображение</div>
-              </div>
-              <div class="item-col">
-                <div class="item-head description bg-none hide-mobile">Наименование продукции</div>
-              </div>
-            </div>
-
-            <div class="item-row">
-              <div class="item-col">
-                <div class="item-head bg-none hide-mobile">Срок годности</div>
-              </div>
-              <div class="item-col">
-                <div class="item-head bg-none hide-mobile">Ед. изм </div>
-              </div>
-            </div>
-
-            <div class="item-row">
-              <div class="item-col">
-                <div class="item-head bg-none hide-mobile">Склад изготовителя</div>
-              </div>
-              <div class="item-col">
-                <div class="item-head bg-none hide-mobile">Франко-станция назначения</div>
-              </div>
-            </div>
-          </div>
+        <div class="table-head">
+          <div class="col col--number">№ п.п</div>
+          <div class="col col--image">Изображение</div>
+          <div class="col">Наименование продукции</div>
+          <div class="col col--small">Срок годности</div>
+          <div class="col col--small">Ед. изм</div>
+          <div class="col col--small">Склад изготовителя</div>
+          <div class="col col--small">Франко-станция назначения</div>
         </div>
+        
         <!-- body table -->
         <div class="price-list">
           @@include('../components/PriceListItem/index.html', {

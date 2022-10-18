@@ -44,9 +44,51 @@
   .sub-text {
     margin: 40px 0;
   }
+
+  .table-head {
+    display: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+
+    @include md {
+      display: flex;
+    }
+  }
+
+  .col {
+    @include flex-all-center;
+    padding: 0 10px;
+    width: 100%;
+
+    &--number {
+      max-width: 48px;
+    }
+    &--image {
+      max-width: 115px;
+    }
+    &--small {
+      max-width: 12%;
+      
+      @include lg {
+        max-width: 9%;
+      }
+    }
+  }
+
+  .dfss-modify {
+    @include md {
+      width: 100%;
+      max-width: 24%;
+    }
+
+    @include lg {
+      max-width: 18%;
+    }
+  }
 }
 
-.price-list, .price-list-th {
+.price-list {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -59,6 +101,9 @@
     width: 100%;
 
     @include md {
+      &:nth-child(odd) {
+        background-color: $gray-6;
+      }
       flex-wrap: nowrap;
     }
 

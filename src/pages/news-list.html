@@ -5,7 +5,7 @@
   <body class="page__body">
     <div class="main-wrapper news-list-page">
       @@include('../components/Header/index.html') @@include('../components/HeaderTitle/index.html', { 
-        'image': './assets/img/news.jpg', 'title': 'Аудиторское заключение по консолидированной финансовой отчётности ОАО «Лунинецкий МЗ» за 2021 год'
+        'image': './assets/img/header-news-list.jpg', 'title': 'Аудиторское заключение по консолидированной финансовой отчётности ОАО «Лунинецкий МЗ» за 2021 год'
       })
       @@include('../components/Breadcrumbs/index.html')
 
@@ -97,6 +97,10 @@
 
           <!-- paginatoin -->
           @@include('../components/Pagination/index.html')
+
+          <div class="page-decore page-decore--bottom page-decore--right">
+            @@include('../assets/svg/bg-cow-decor.svg')
+          </div>
         </div>
       </main>
 

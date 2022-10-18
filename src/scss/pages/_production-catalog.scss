@@ -57,6 +57,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 30px;
+    gap: 20px 30px;
 
     @include md {
       margin-bottom: 55px;
@@ -72,15 +73,16 @@
     padding-bottom: 12px;
     height: 380px;
     flex: 1 0 100%;
+    border: 2px solid #bdbdbd;
 
     @include md {
-      flex: 1 0 50%;
+      flex: 1 0 calc(50% - 30px);
       max-width: 50%;
     }
 
     @include lg {
-      flex: 1 0 25%;
-      max-width: 25%
+      flex: 1 0 calc(25% - 30px);
+      max-width: 280px;
     }
 
     &__image {
@@ -92,6 +94,7 @@
 
       img {
         object-fit: cover;
+        width: 100%;
       }
 
       .marker-wrapper {
@@ -102,7 +105,7 @@
 
         &.soon {
           border-left-color: $blue;
-        border-top-color: $blue;
+          border-top-color: $blue;
         }
         &.stock {
           border-left-color: $green;
@@ -139,16 +142,75 @@
       }
     }
 
-    .title, .subtitle {
+    .title,
+    .subtitle {
       font-weight: 600;
       font-size: 19px;
       line-height: 24px;
       color: $blue;
-      @include clampLine(2)
+      @include clampLine(2);
     }
 
     .subtitle {
       color: $brown;
     }
   }
+
+  &.production-catalog--v1 {
+    #logoSlider .slide--v1 img {
+      filter: grayscale(0);
+    }
+  
+    & .catalog-card:hover {
+      border-color: $blue;
+  
+      .title {
+        color: $blue;
+      }
+    }
+  }
+  
+  &.production-catalog--v2 {
+    #logoSlider .slide--v2 img {
+      filter: grayscale(0);
+    }
+  
+    & .catalog-card:hover {
+      border-color: $orange-2;
+  
+      .title {
+        color: $orange-2;
+      }
+    }
+  }
+  
+  &.production-catalog--v3 {
+    #logoSlider .slide--v3 img {
+      filter: grayscale(0);
+    }
+  
+    & .catalog-card:hover {
+      border-color: $green-2;
+  
+      .title {
+        color: $green-2;
+      }
+    }
+  }
+  
+  &.production-catalog--v4 {
+    #logoSlider .slide--v4 img {
+      filter: grayscale(0);
+    }
+  
+    & .catalog-card:hover {
+      border-color: $brown;
+  
+      .title {
+        color: $brown;
+      }
+    }
+  }
 }
+
+

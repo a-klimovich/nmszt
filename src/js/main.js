@@ -40,8 +40,8 @@
         $burger.toggleClass("burger__active");
         $headerNav.toggleClass(cssClassOpen);
       }
-      $searchInput.toggleClass("active");
-      $logoImage.toggleClass("is-hidden");
+
+      $('.mobile-c-l').toggleClass('active');
     });
 
     // SLIDERS

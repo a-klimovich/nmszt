@@ -25,10 +25,10 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
-    color: $gray-3;
+    color: $blue;
 
     transition: background-color 0.3s;
-    border: 2px solid $gray-3;
+    border: 2px solid $blue;
     @include mr(6px);
 
     @include lg {
@@ -43,8 +43,8 @@
   }
 
   & a:hover:not(.active) {
-    color: $blue;
-    border-color: $blue;
+    color: $brown;
+    border-color: $brown;
   }
   
   &__next, &__prev {
@@ -55,13 +55,13 @@
       height: 18px;
     
       & path {
-        fill: $gray-3;
+        fill: $blue;
       }
     }
 
     &:hover {
       svg path {
-        fill: $blue;
+        fill: $brown;
       }
     }
   }

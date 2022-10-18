@@ -41,14 +41,14 @@
       margin-top: 60px;
       flex-direction: row;
     }
-    
+
     .wrap--first {
       display: flex;
       flex-direction: column;
       flex: 1 0 auto;
       gap: 30px;
       margin-right: 0px;
-      
+
       @include md {
         flex-direction: row;
         gap: 64px;
@@ -59,7 +59,7 @@
         gap: 35px;
         margin-bottom: 0;
       }
-      
+
       @include rwd(1046) {
         margin-right: 30px;
       }
@@ -74,7 +74,7 @@
       gap: 30px;
       flex: 1 0 auto;
       margin-bottom: 30px;
-      
+
       @include md {
         gap: 64px;
         flex-direction: row;
@@ -121,7 +121,7 @@
         font-size: 14px;
         line-height: 22px;
 
-        ul li{
+        ul li {
           margin-bottom: 0.77rem;
         }
       }
@@ -130,6 +130,21 @@
     .board-card--address {
       .content {
         margin-bottom: 20px;
+      }
+    }
+
+    .board-card--requisites {
+      position: relative;
+
+      .decore-img {
+        display: none;
+        position: absolute;
+        right: 5%;
+        bottom: 100%;
+
+        @include md {
+          display: block;
+        }
       }
     }
   }
