@@ -17,6 +17,18 @@
   .slide {
     padding: 0 10px;
     text-align: center;
+    transition: all 0.356s;
+
+    &:hover {
+      img {
+        transition: all 0.356s;
+        scale: 0.985;
+      }
+
+      h4 {
+        text-decoration: underline;
+      }
+    }
 
     &__img {
       margin-bottom: 38px;

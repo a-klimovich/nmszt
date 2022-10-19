@@ -48,8 +48,8 @@
     $("#mainSlider").slick({
       slidesToShow: 1,
       // arrows: false,
-      prevArrow: '<span class="arrow prev"><img src="../../assets/arrow.svg" alt=""></span>',
-      nextArrow: '<span class="arrow next"><img src="../../assets/arrow.svg" alt=""></span>',
+      prevArrow: '<span class="arrow prev"><img src="./assets/arrow.svg" alt=""></span>',
+      nextArrow: '<span class="arrow next"><img src="./assets/arrow.svg" alt=""></span>',
       dots: true,
       responsive: [
         {

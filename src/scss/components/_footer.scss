@@ -8,12 +8,12 @@
 
   .wrapper__navigate {
     padding-top: 25px;
-    padding-bottom: 32px;
+    padding-bottom: 25px;
     margin-bottom: 10px;
     position: relative;
 
     @include md {
-      padding-top: 40px;
+      padding-top: 25px;
       padding-bottom: 25px;
       margin-bottom: 0;
     }
@@ -35,8 +35,8 @@
 
       @include md {
         text-align: left;
-        justify-content: left;
       }
+
       @include xl {
         justify-content: space-between;
       }

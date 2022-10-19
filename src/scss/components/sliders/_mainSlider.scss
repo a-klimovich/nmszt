@@ -107,8 +107,8 @@
       }
     }
 
-    @include xl {
-      height: 755px;
+    @include lg {
+      height: calc(100vh - 70px);
 
       &__text {
         font-size: 36px;
