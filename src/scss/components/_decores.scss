@@ -24,6 +24,11 @@
     }
   }
 
+  &.default-size svg {
+    width: auto;
+    height: auto;
+  }
+
   &--bottom {
     bottom: 0;
   }

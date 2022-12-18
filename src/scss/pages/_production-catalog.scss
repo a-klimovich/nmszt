@@ -8,6 +8,11 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+
+    @include md {
+      text-align: left;
+      max-width: 913px;
+    }
   }
 
   &-menu {
@@ -156,8 +161,38 @@
     }
   }
 
+  & .catalog-card:hover {
+    border-color: $blue;
+
+    .title {
+      color: $blue;
+    }
+  }
+
   &.production-catalog--v1 {
     #logoSlider .slide--v1 img {
+      filter: grayscale(0);
+    }
+
+    .production-catalog-menu .menu-list-item a:hover {
+      color: $green-2;
+
+      svg path {
+        fill: $green-2;
+      }
+    }
+
+    & .catalog-card:hover {
+      border-color: $green-2;
+  
+      .title {
+        color: $green-2;
+      }
+    }
+  }
+  
+  &.production-catalog--v2 {
+    #logoSlider .slide--v2 img {
       filter: grayscale(0);
     }
   
@@ -170,9 +205,17 @@
     }
   }
   
-  &.production-catalog--v2 {
-    #logoSlider .slide--v2 img {
+  &.production-catalog--v3 {
+    #logoSlider .slide--v3 img {
       filter: grayscale(0);
+    }
+
+    .production-catalog-menu .menu-list-item a:hover {
+      color: $orange-2;
+
+      svg path {
+        fill: $orange-2;
+      }
     }
   
     & .catalog-card:hover {
@@ -184,23 +227,17 @@
     }
   }
   
-  &.production-catalog--v3 {
-    #logoSlider .slide--v3 img {
-      filter: grayscale(0);
-    }
-  
-    & .catalog-card:hover {
-      border-color: $green-2;
-  
-      .title {
-        color: $green-2;
-      }
-    }
-  }
-  
   &.production-catalog--v4 {
     #logoSlider .slide--v4 img {
       filter: grayscale(0);
+    }
+
+    .production-catalog-menu .menu-list-item a:hover {
+      color: $brown;
+
+      svg path {
+        fill: $brown;
+      }
     }
   
     & .catalog-card:hover {

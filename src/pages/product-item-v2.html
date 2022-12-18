@@ -15,80 +15,85 @@
       })
       @@include('../components/Breadcrumbs/index.html')
 
-      <div class="container">
-        <div class="mt-3">
-          <div class="product-item-info-wrapper">
-            <div class="product-image-slider">
-              <img class="product-image-slider--logo" src="assets/logos-2-1.png" alt="">
 
-              <div id="productBigImage">
-                <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
-                <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
-                <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
-                <div class="slide">
-                  <div class="video">
-                    <video controls preload="metadata" poster="example.png">
-                      <source type="video/webm" src="example.webm">
-                      <source type="video/mp4" src="example.mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
-              <div id="productSmallImage">
-                <div class="slide"><img src="assets/img/small-img-product.jpg" alt=""></div>
-                <div class="slide"><img src="assets/img/small-img-product-1.jpg" alt=""></div>
-                <div class="slide"><img src="assets/img/small-img-product-2.jpg" alt=""></div>
-                <div class="slide video"><img src="assets/img/small-video-product.jpg" alt=""></div>
-              </div>
-            </div>
-            <div class="product-item-table">
-              <h2 class="product-item-title">Питьевое молоко А2 3,6%</h2>
-  
-              <div class="table">
-                @@loop('../partials/table-row.html', [
-                  { "image": "./assets/svg/icon-p-1.svg", "title": "Состав", "text": "нормализованное пастеризованное молоко «А2»" },
-                  { "image": "./assets/svg/icon-p-2.svg", "title": "Массовая доля жира", "text": "3,6%" },
-                  { "image": "./assets/svg/icon-p-3.svg", "title": "Объем", "text": "0,75 л" },
-                  { "image": "./assets/svg/icon-p-4.svg", "title": "Пищевая ценность 100г продукта", "text": "белки – 3,0г, жиры — 3,6 г, углеводы– 4,7г" },
-                  { "image": "./assets/svg/icon-p-5.svg", "title": "Энергетическая ценность 100г продукта", "text": "65,0 ккал / 272,0 кДж" },
-                  { "image": "./assets/svg/icon-p-6.svg", "title": "Срок годности", "text": "7 суток" },
-                  { "image": "./assets/svg/icon-p-7.svg", "title": "Температура хранения до и после вскрытия упаковки", "text": "от 2С до 6С" },
-                  { "image": "./assets/svg/icon-p-8.svg", "title": "Упаковка", "text": "бутылка стеклянная" },
-                  { "image": "./assets/svg/icon-p-9.svg", "title": "Количество в тарном месте", "text": "6 шт." },
-                ])
-  
-                <!-- EXTRA ROW -->
-                <div class="table-row">
-                  <div class="table-col table-col-1">
-                    <img src="./assets/svg/icon-p-10.svg" alt="icons product pac">
-                  </div>
-                
-                  <div class="table-row table-row--custom">
-                    <div class="table-col table-col-2">
-                      Сертификат №1
-                    </div>
-                
-                    <div class="table-col table-col-3">
-                      <a href='#' target="_blank" class='table__download-btn'><span>@@include('../assets/svg/download-arrow.svg')</span> Скачать</a>
+      <div class="position-relative">
+        <div class="container">
+          <div class="mt-3">
+            <div class="product-item-info-wrapper">
+              <div class="product-image-slider">
+                <div id="productBigImage">
+                  <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
+                  <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
+                  <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
+                  <div class="slide">
+                    <div class="video">
+                      <video controls preload="metadata" poster="example.png">
+                        <source type="video/webm" src="example.webm">
+                        <source type="video/mp4" src="example.mp4">
+                      </video>
                     </div>
                   </div>
                 </div>
+                <div id="productSmallImage">
+                  <div class="slide"><img src="assets/img/small-img-product.jpg" alt=""></div>
+                  <div class="slide"><img src="assets/img/small-img-product-1.jpg" alt=""></div>
+                  <div class="slide"><img src="assets/img/small-img-product-2.jpg" alt=""></div>
+                  <div class="slide video"><img src="assets/img/small-video-product.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="product-item-table">
+                <h2 class="product-item-title">Питьевое молоко А2 3,6%</h2>
+    
+                <div class="table">
+                  @@loop('../partials/table-row.html', [
+                    { "image": "./assets/svg/icon-p-1.svg", "title": "Состав", "text": "нормализованное пастеризованное молоко «А2»" },
+                    { "image": "./assets/svg/icon-p-2.svg", "title": "Массовая доля жира", "text": "3,6%" },
+                    { "image": "./assets/svg/icon-p-3.svg", "title": "Объем", "text": "0,75 л" },
+                    { "image": "./assets/svg/icon-p-4.svg", "title": "Пищевая ценность 100г продукта", "text": "белки – 3,0г, жиры — 3,6 г, углеводы– 4,7г" },
+                    { "image": "./assets/svg/icon-p-5.svg", "title": "Энергетическая ценность 100г продукта", "text": "65,0 ккал / 272,0 кДж" },
+                    { "image": "./assets/svg/icon-p-6.svg", "title": "Срок годности", "text": "7 суток" },
+                    { "image": "./assets/svg/icon-p-7.svg", "title": "Температура хранения до и после вскрытия упаковки", "text": "от 2С до 6С" },
+                    { "image": "./assets/svg/icon-p-8.svg", "title": "Упаковка", "text": "бутылка стеклянная" },
+                    { "image": "./assets/svg/icon-p-9.svg", "title": "Количество в тарном месте", "text": "6 шт." },
+                  ])
+    
+                  <!-- EXTRA ROW -->
+                  <div class="table-row">
+                    <div class="table-col table-col-1">
+                      <img src="./assets/svg/icon-p-10.svg" alt="icons product pac">
+                    </div>
+                  
+                    <div class="table-row table-row--custom">
+                      <div class="table-col table-col-2">
+                        Сертификат №1
+                      </div>
+                  
+                      <div class="table-col table-col-3">
+                        <a href='#' target="_blank" class='table__download-btn'><span>@@include('../assets/svg/download-arrow.svg')</span> Скачать</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+    
+            <div class="text-about">
+              <p>
+                Питьевое молоко А2 3,6% торговой марки 
+                «Асаблівае» – это особое отборное молоко,
+                которое содержит только лишь белок А2.
+                Оно изготавливается из пастеризованного
+                коровьего молока, получаемого от коров
+                с двойным геном бета-казеина A2. 
+                Регулярное употребление этого молока способствует
+                укреплению иммунитета и восстановлению сил.
+              </p>
+            </div>
           </div>
-  
-          <div class="text-about">
-            <p>
-              Питьевое молоко А2 3,6% торговой марки 
-              «Асаблівае» – это особое отборное молоко,
-              которое содержит только лишь белок А2.
-              Оно изготавливается из пастеризованного
-              коровьего молока, получаемого от коров
-              с двойным геном бета-казеина A2. 
-              Регулярное употребление этого молока способствует
-              укреплению иммунитета и восстановлению сил.
-            </p>
-          </div>
+        </div>
+
+        <div class="page-decore page-decore--bottom page-decore--right z-0 default-size">
+          @@include('../assets/svg/cow-v1.svg')
         </div>
       </div>
 

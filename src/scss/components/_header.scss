@@ -77,15 +77,27 @@
             background: $blue;
             width: 100%;
           }
+
+          & .arrow-drop-down {
+            transform: rotate(-90deg);
+          }
         }
       }
     }
 
     &__link {
+      display: flex;
       font-weight: 500;
       font-size: 13px;
       line-height: 16px;
       color: $blue;
+
+      & .arrow-drop-down {
+        transform: rotate(90deg);
+        width: 6px;
+        stroke: $blue;
+        margin-left: 8px;
+      }
 
       @media screen and (max-width: 1440px) {
         font-size: 100%;
