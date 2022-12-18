@@ -1,0 +1,16 @@
+.svg-a-drop-decore {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  &.white path {
+    fill: $white;
+  }
+  &.blue path {
+    fill: $blue;
+  }
+  &.brown path {
+    fill: $brown;
+  }
+}

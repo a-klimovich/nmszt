@@ -16,7 +16,11 @@
         </div>
       </div>
 
-      <div class="fluid-wrapper bg-slider-logo-1">
+      <div class="fluid-wrapper bg-slider-logo-1 position-relative">
+        @@include('../assets/svg/a-drop-decore.svg', {
+          'color': 'white',
+        })
+
         <div class="container">
           <h2 class="section-title color-white centered">НОВИНКИ</h2>
 
@@ -24,34 +28,47 @@
         </div>
       </div>
 
-      <div class="container">
-        <section class="section-news pt-4">
-          <h2 class="section-title centered">Новости</h2>
+      <div class="fluide-warpper position-relative">
+        <div class="container">
+          <section class="section-news pt-4 position-relative">
+            @@include('../assets/svg/a-drop-decore.svg', {
+              'color': 'blue',
+            })
+  
+            <h2 class="section-title centered">Новости</h2>
+  
+            <div class="section-news__list">
+              <a href="#" class="section-news__list-item">
+                <div class="date">27 Июля 2022</div>
+                <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
+              </a>
+              <a href="#" class="section-news__list-item">
+                <div class="date">27 Июля 2022</div>
+                <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
+              </a>
+              <a href="#" class="section-news__list-item">
+                <div class="date">27 Июля 2022</div>
+                <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
+              </a>
+              <a href="#" class="section-news__list-item">
+                <div class="date">27 Июля 2022</div>
+                <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
+              </a>
+            </div>
+  
+            <a href="#" class="section-news__link">ВСЕ НОВОСТИ</a>
+          </section>
+        </div>
 
-          <div class="section-news__list">
-            <a href="#" class="section-news__list-item">
-              <div class="date">27 Июля 2022</div>
-              <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
-            </a>
-            <a href="#" class="section-news__list-item">
-              <div class="date">27 Июля 2022</div>
-              <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
-            </a>
-            <a href="#" class="section-news__list-item">
-              <div class="date">27 Июля 2022</div>
-              <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
-            </a>
-            <a href="#" class="section-news__list-item">
-              <div class="date">27 Июля 2022</div>
-              <div class="text">Аудиторское заключение по консолидированной финансовой отчётности... </div>
-            </a>
-          </div>
-
-          <a href="#" class="section-news__link">ВСЕ НОВОСТИ</a>
-        </section>
+        <div class="page-decore page-decore--bottom page-decore--left page-decore--reverse z-0">
+          @@include('../assets/svg/bg-cow-decor.svg')
+        </div>
       </div>
 
-      <div class="fluid-wrapper bg-slider-logo-2 pt-4">
+      <div class="fluid-wrapper bg-slider-logo-2 pt-4 position-relative">
+        @@include('../assets/svg/a-drop-decore.svg', {
+          'color': 'white',
+        })
         <div class="container">
           <h2 class="section-title color-white centered">Награды</h2>
 
@@ -59,19 +76,19 @@
             <div id="achivSlider">
               <div>
                 <div class="img">
-                  <img src="./assets/img/nagrady11-1.jpg" alt="">
+                  <img src="assets/img/nagrady11-1.jpg" alt="">
                 </div>
               </div>
 
               <div>
                 <div class="img">
-                  <img src="./assets/img/nagrady16-1.jpg" alt="">
+                  <img src="assets/img/nagrady16-1.jpg" alt="">
                 </div>
               </div>
 
               <div>
                 <div class="img">
-                  <img src="./assets/img/nagrady15-1.jpg" alt="">
+                  <img src="assets/img/nagrady15-1.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -81,13 +98,16 @@
         </div>
       </div>
 
-      <div class="fluid-wrapper bg-gray-6 pt-4 pb-7">
+      <div class="fluid-wrapper bg-gray-6 pt-4 pb-7 position-relative">
+        @@include('../assets/svg/a-drop-decore.svg', {
+          'color': 'brown',
+        })
         <div class="container">
           <h2 class="section-title color-blue centered">О компании</h2>
 
           <div class="section-about-company">
             <div class="section-about-company__image">
-              <img src="./assets/company-main-page.jpg" alt="company-main-page">
+              <img src="assets/company-main-page.jpg" alt="company-main-page">
             </div>
 
             <div class="section-about-company__text">
@@ -100,16 +120,20 @@
             </div>
           </div>
         </div>
+
+        <div class="page-decore page-decore--bottom page-decore--right z-0">
+          @@include('../assets/svg/bg-cow-decor.svg')
+        </div>
       </div>
 
       <div class="container">
         <h2 class="section-title color-blue centered pt-4">Полезные ссылки</h2>
 
         <div class="section-links">
-          <a href="#"><img src="./assets/links-img-main-page.png" alt=""></a>
-          <a href="#"><img src="./assets/links-img-main-page-2.png" alt=""></a>
-          <a href="#"><img src="./assets/links-img-main-pag-3.png" alt=""></a>
-          <a href="#"><img src="./assets/links-img-main-page-4.png" alt=""></a>
+          <a href="#"><img src="assets/links-img-main-page.png" alt=""></a>
+          <a href="#"><img src="assets/links-img-main-page-2.png" alt=""></a>
+          <a href="#"><img src="assets/links-img-main-pag-3.png" alt=""></a>
+          <a href="#"><img src="assets/links-img-main-page-4.png" alt=""></a>
         </div>
       </div>
     </main>
