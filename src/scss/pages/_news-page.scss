@@ -30,18 +30,18 @@
       margin: 0 -10px;
 
       &[data-cols='2'] {
-        img {
+        a {
           max-width: calc(100% / 2);
         }
       }
 
       &[data-cols='3'] {
-        img {
+        a {
           max-width: calc(100% / 3);
         }
       }
 
-      img {
+      a {
         padding: 0 10px;
         margin-bottom: 20px;
       }

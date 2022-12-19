@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
   @@include('../utils/head.html')
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <body class="page__body">
   <div class="main-wrapper news-page">
     @@include('../components/Header/index.html')
@@ -49,9 +52,12 @@
               </p>
           
               <div class="mb-3">
-                <div class="news__imgs" data-cols="2">
-                  <img src="assets/img/news-img-big.jpg" alt="" />
-                  <img src="assets/img/news-img-big.jpg" alt="" />
+                <div class="news__imgs gallery" data-cols="2">
+                  <a href="assets/img/news-img-big.jpg">
+                    <img src="assets/img/news-img-big.jpg" alt="" />
+                  </a><a href="assets/img/news-img-big.jpg">
+                    <img src="assets/img/news-img-big.jpg" alt="" />
+                  </a>
                 </div>
               </div>
   
@@ -89,13 +95,25 @@
                 </li>
               </ul>
   
-              <div class="news__imgs mb-3" data-cols="3">
-                <img src="assets/img/news-img-big.jpg" alt="" />
-                <img src="assets/img/news-img-big.jpg" alt="" />
-                <img src="assets/img/news-img-big.jpg" alt="" />
-                <img src="assets/img/news-img-big.jpg" alt="" />
-                <img src="assets/img/news-img-big.jpg" alt="" />
-                <img src="assets/img/news-img-big.jpg" alt="" />
+              <div class="news__imgs mb-3 gallery" data-cols="3">
+                <a href="assets/img/news-img-big.jpg">
+                  <img src="assets/img/news-img-big.jpg" alt="" />
+                </a>
+                <a href="assets/img/news-img-big.jpg">
+                  <img src="assets/img/news-img-big.jpg" alt="" />
+                </a>
+                <a href="assets/img/news-img-big.jpg">
+                  <img src="assets/img/news-img-big.jpg" alt="" />
+                </a>
+                <a href="assets/img/news-img-big.jpg">
+                  <img src="assets/img/news-img-big.jpg" alt="" />
+                </a>
+                <a href="assets/img/news-img-big.jpg">
+                  <img src="assets/img/news-img-big.jpg" alt="" />
+                </a>
+                <a href="assets/img/news-img-big.jpg">
+                  <img src="assets/img/news-img-big.jpg" alt="" />
+                </a>
               </div>
   
               <p>
@@ -148,4 +166,11 @@
 </body>
 
 @@include('../utils/includes.html')
+
+<script>
+  window.addEventListener('load', function() {
+    baguetteBox.run('.gallery');
+  });
+</script>
+
 </html>

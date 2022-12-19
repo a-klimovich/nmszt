@@ -21,9 +21,21 @@
             <div class="product-item-info-wrapper">
               <div class="product-image-slider">
                 <div id="productBigImage">
-                  <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
-                  <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
-                  <div class="slide"><img src="assets/img/normal-image-product.jpg" alt=""></div>
+                  <div class="slide show-in-modal">
+                    <a href="assets/img/normal-image-product.jpg">
+                      <img src="assets/img/normal-image-product.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="slide show-in-modal">
+                    <a href="assets/img/normal-image-product.jpg">
+                      <img src="assets/img/normal-image-product.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="slide show-in-modal">
+                    <a href="assets/img/normal-image-product.jpg">
+                      <img src="assets/img/normal-image-product.jpg" alt="">
+                    </a>
+                  </div>
                   <div class="slide">
                     <div class="video">
                       <video controls preload="metadata" poster="example.png">
@@ -130,7 +142,7 @@
 @@include('../utils/includes.html')
 <script>
   window.addEventListener('load', function() {
-    baguetteBox.run('.imageGalery');
+    baguetteBox.run('.show-in-modal');
   });
 </script>
 </html>
