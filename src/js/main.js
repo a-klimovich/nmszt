@@ -7,6 +7,7 @@
     const cssClassIsHidden = "is-hidden";
 
     // Node's
+    const $body = $("body")
     const $headerNav = $("#headerNav");
     const $burger = $(".burger");
     const $submenuHeaderBtn = $(".submenu-header");
@@ -19,8 +20,10 @@
 
       if (scrollTop > 72 || scrollTopDocumentElement > 72) {
         $header.addClass("scroll");
+        $body.addClass("scroll");
       } else {
         $header.removeClass("scroll");
+        $body.removeClass("scroll");
       }
     }
 

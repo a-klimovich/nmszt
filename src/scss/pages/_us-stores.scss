@@ -85,134 +85,73 @@
     }
   }
 
-  .shops-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
 
-    &:nth-child(2n) {
-      background-color: $gray-6;
-    }
+  .table-wrapper {
+    overflow-x: auto;
 
-    .wraped-block {
-      display: flex;
-      flex: 1 0 100%;
-
-      &--fix-width {
-        flex: 1 0 auto;
-      }
-
-      @include md {
-       flex: 1 0 auto;
-
-        &--fix-width {
-          flex: 0 1 120px;
-        }
-      }
-    }
-
-    &--item {
-      .title {
-        @include flex-all-center;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        height: 28px;
-        background-color: #D9D9D9;
+    table {
+      width: 100%;
+      box-sizing: border-box;
+      border-spacing: 0;
+  
+      th, td {
+        padding: 0.75rem;
+        vertical-align: top;
 
         @include md {
-          display: none;
-          height: 60px;
+          padding: 1.35rem;
+        }
 
-          background-color: $white;
+        @include lg {
+          padding: 1.65rem;
+        }
+      }
+  
+      td {
+        text-align: center;
+      }
+  
+      tbody tr {
+        &:nth-child(odd) {
+          background-color: #F2F2F2;
+        }
+  
+        th {
+          &:nth-child(1) {
+            font-weight: 500;
+          }
+        }
+  
+        td {
+          &:nth-child(2) {
+            text-align: inherit;
+          }
         }
       }
 
-      .data {
-        @include flex-all-center;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 16px;
-        color: $gray-2;
-        white-space: nowrap;
-        height: 42px;
-
-        @include md {
-          height: 70px;
-        }
-      }
-    }
-
-    &__number {
-      flex: 0 0 28px;
-
-      @include md {
-        flex: 0 0 48px;
-      }
-    }
-
-    &__name {
-      .data {
-        
-        @include md {
-          justify-content: flex-start;
-          padding-left: 2rem;
-        }
-      }
-
-      flex: 1 0 50%;
-    }
-
-    &__region {
-      flex: 1 0 35%;
-    }
-
-    &__address {
-      flex: 1 0 10%;
-    }
-
-    &__link {
-      flex: 1 0 auto;
-
-      a {
-        padding: 0.4rem 1rem;
-        background: #bdbdbd;
-        border-radius: 5px;
+      .table__btn {
+        padding: 4px 10px;
+        border-radius: 4px;
+        border-color: $blue;
         color: $white;
+        background-color: $blue;
+        white-space: nowrap;
 
         &:hover {
-          background-color: $blue;
+          border-color: $brown;
+          color: $white;
+          background-color: $brown;
         }
-      }
-    }
-  }
 
-  .shops-list--desktop-table-header {
-    display: none;
-    border: 2px solid $gray-6;
-    border-right: 0;
-
-    // .shops-list--item .title {
-      
-    //   &:not(:last-child) {
-    //     border-right: 2px solid $gray-6;
-    //   }
-    // }
-
-    .shops-list__name {
-      .title {
-        padding-left: 2rem;
-      }
-    }
-
-    @include md {
-      display: flex;
-
-      .title-desktop-show {
-        @include flex-all-center;
-
-        & {
-          border-right: 2px solid $gray-6;
+        a {
+          padding: 0.4rem 1rem;
+          background: #bdbdbd;
+          border-radius: 5px;
+          color: $white;
+  
+          &:hover {
+            background-color: $blue;
+          }
         }
       }
     }

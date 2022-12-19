@@ -21,75 +21,67 @@
           <div class="select-wrapper form-filter-store__region">
             <label for="selectRegion">Выбрать область</label>
             <select name="region" id="selectRegion">
-              <option value="one">one</option>
-              <option value="two">two</option>
+              <option value="1">Минская</option>
+              <option value="2">Гродненская</option>
+              <option value="3">Брестская</option>
+              <option value="4">Лидская</option>
+              <option value="5">Гомельская</option>
             </select>
           </div>
           
           <div class="select-wrapper form-filter-store__city">
             <label for="selectCity">Выбрать город</label>
             <select name="city" id="selectCity">
-              <option value="one">one</option>
-              <option value="two">two</option>
+              <option value="1">Минск</option>
+              <option value="2">Гродно</option>
+              <option value="3">Брест</option>
+              <option value="4">Витебск</option>
             </select>
           </div>
         </form>
 
-        <!-- show on desktop like a table header -->
-        <div class="shops-list shops-list--desktop-table-header">
-          <div class="wraped-block">
-            <div class="shops-list--item shops-list__number">
-              <div class="title title-desktop-show centered">№ п.п</div>
-            </div>
-
-            <div class="shops-list--item shops-list__name">
-              <div class="title title-desktop-show centered">Название</div>
-            </div>
-          </div>
-
-          <div class="wraped-block">
-            <div class="shops-list--item shops-list__region">
-              <div class="title title-desktop-show centered">Область и город</div>
-            </div>
-
-            <div class="shops-list--item shops-list__address">
-              <div class="title title-desktop-show centered">Адрес</div>
-            </div>
-          </div>
-
-          <div class="wraped-block wraped-block--fix-width">
-            <div class="shops-list--item shops-list__link">
-              <div class="title title-desktop-show centered">На карте</div>
-            </div>
-          </div>
+        <div class="table-wrapper">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">№ п.п</th>
+                <th scope="col">Название</th>
+                <th scope="col">Область и город</th>
+                <th scope="col">Адрес</th>
+                <th scope="col">На карте</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td scope="row">"Брестский торговый центр "Корона"</td>
+                <td scope="row">Брестская, г. Брест</td>
+                <td scope="row">пр-т. Машерова, 16</td>
+                <td scope="row">
+                  <a href="#" target="_blank" class="table__btn btn-default">На карте</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>"Брестский торговый центр "Корона"</td>
+                <td>Брестская, г. Брест</td>
+                <td>пр-т. Машерова, 16</td>
+                <td>
+                  <a href="#" target="_blank" class="table__btn btn-default">На карте</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>"Брестский торговый центр "Корона"</td>
+                <td>Брестская, г. Брест</td>
+                <td>пр-т. Машерова, 16</td>
+                <td>
+                  <a href="#" target="_blank" class="table__btn btn-default">На карте</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!-- show on desktop like a table header END -->
-
-        <!-- List -->
-          @@loop('../components/UsStoreTable/index.html', [
-            {
-              'number': '1',
-              'name': '"Брестский торговый центр "Корона"',
-              'region': 'Брестская обл., г. Брест',
-              'addres': 'пр-т. Машерова, 16',
-              'mapLink': '#',
-            },
-            {
-              'number': '2',
-              'name': 'Магазин №30 ПФ Дружба',
-              'region': 'Брестская',
-              'addres': 'пер. Козлова, 6',
-              'mapLink': '#',
-            },
-            {
-              'number': '3',
-              'name': 'Брестский торговый центр "Корона"',
-              'region': 'Брестская',
-              'addres': 'пр-т. Машерова, 16',
-              'mapLink': '#',
-            },
-          ])
-        <!-- List END -->
         <div class="bottom-space-5"></div>
       </div>
     </main>
