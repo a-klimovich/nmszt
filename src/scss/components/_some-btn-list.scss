@@ -1,4 +1,4 @@
-.some-btn-list {
+.tag {
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
@@ -18,10 +18,6 @@
     @include md {
       margin-right: 10px;
       margin-bottom: 20px;
-    }
-
-    &:hover {
-      color: $brown;
     }
   }
 }

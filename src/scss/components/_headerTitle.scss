@@ -36,4 +36,63 @@
       line-height: 44px;
     }
   }
+
+  &--search {
+    & .header-title-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      @include flex-all-center;
+      flex-direction: column;
+
+      h1 {
+        position: static;
+        width: auto;
+        top: auto;
+        left: auto;
+        transform: translate(0);
+        margin-bottom: 32px;
+      }
+    }
+
+    .catalog-search-form {
+      background-color: $white;
+      border-radius: 7px;
+      padding: 7px 10px;
+      max-width: 362px;
+      width: 100%;
+      display: flex;
+
+      input {
+        flex: auto;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 16px;
+          color: $gray-3;
+          font-style: italic;
+        }
+      }
+      
+      .search-btn {
+        @include flex-all-center;
+        padding: 4px;
+        width: 30px;
+
+        svg {
+          width: 1rem;
+
+          path {
+            fill: $gray-3;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,6 +1,6 @@
 
 #logoSlider {
-  padding: 20px 0 35px;
+  padding: 20px 0 20px;
 
   .slide {
     @include flex-all-center;
@@ -32,7 +32,7 @@
 }
 
 .wrapper-logo-slider {
-  padding: 35px 0;
+  padding: 25px 0;
 }
 
 .fluid-wrapper.bg-slider-logo {

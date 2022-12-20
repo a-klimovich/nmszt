@@ -226,6 +226,10 @@
       text-align: left;
       max-width: 913px;
     }
+
+    @include rwd(1280) {
+      margin-left: 40px;
+    }
   }
 
   .menu-botom-hr {
