@@ -221,10 +221,10 @@
   .text-about {
     margin-bottom: 80px;
     text-align: center;
+    width: 100%;
 
     @include md {
       text-align: left;
-      max-width: 913px;
     }
 
     @include rwd(1280) {
