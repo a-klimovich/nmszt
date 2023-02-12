@@ -155,7 +155,20 @@
       ],
     });
 
-    // PRODUCT ITEM SLIDERs
+    
+    
+  });
+
+  $(".pagination .pagination__number.active").click((event) => event.preventDefault());
+})();
+
+// PRODUCT ITEM SLIDERs
+window.addEventListener('load', function() {
+  const productBigImageSlider = $('productBigImage');
+  const productSmallImageSlider = $('productSmallImage');
+  const bugetImageContainer = $('.show-in-modal');
+
+  if (productBigImageSlider && productSmallImageSlider && bugetImageContainer) {
     $("#productBigImage").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -163,7 +176,6 @@
       asNavFor: "#productSmallImage",
       arrows: true,
     });
-
     $("#productSmallImage").slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -172,5 +184,7 @@
       focusOnSelect: true,
       arrows: false,
     });
-  });
-})();
+  
+    baguetteBox.run('.show-in-modal');
+  }
+});

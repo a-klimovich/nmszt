@@ -195,14 +195,6 @@
     #logoSlider .slide--v2 img {
       filter: grayscale(0);
     }
-  
-    & .catalog-card:hover {
-      border-color: $blue;
-  
-      .title {
-        color: $blue;
-      }
-    }
   }
   
   &.production-catalog--v3 {
