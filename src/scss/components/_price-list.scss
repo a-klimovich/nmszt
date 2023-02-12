@@ -1,8 +1,9 @@
 .download-list {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .download {
     display: flex;
@@ -26,7 +27,7 @@
   }
 
   @include md {
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 60px;
   }
 }

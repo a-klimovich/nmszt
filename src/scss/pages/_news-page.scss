@@ -1,6 +1,11 @@
 
 .news-page {
   .news {
+    position: relative;
+    padding-bottom: 100px;
+    @include md {
+      padding-bottom: 200px;
+    }
     &__text {
       color: $gray-2;
       letter-spacing: -0.02em;

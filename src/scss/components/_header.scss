@@ -63,6 +63,8 @@
         @include flex-v-center;
         height: 100%;
         position: relative;
+        padding: 10px 0;
+        cursor: pointer;
 
         &:hover {
           .drop-down-nav-item {

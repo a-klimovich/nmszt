@@ -27,33 +27,16 @@ blockquote {
     background-color: $blue;
     padding-left: calc($paddingBkLg / 2);
 
+    background-image: url('../assets/svg/blockquote.svg');
+    background-position: center 10px;
+    background-repeat: no-repeat;
+    background-size: 70% 20px;
+
     @include xl {
       padding-left: $paddingBkLg;
     }
   }
-
-  .decor {
-    position: absolute;
-    top: 5px;
-    left: calc(($paddingBkLg / 2) / 2);
-    transform: translateX(-50%);
-    
-    @include xl {
-      top: 10px;
-      left: calc($paddingBkLg / 2);
-    }
-
-    svg {
-      width: 12.53px;
-      height: 8.57px;
-
-      @include xl {
-        width: 30.07px;
-        height: 20.57px;
-      }
-    }
-  }
-
+  
   cite {
     text-align: right;
     font-weight: 400;
