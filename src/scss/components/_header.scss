@@ -63,7 +63,6 @@
         @include flex-v-center;
         height: 100%;
         position: relative;
-        padding: 10px 0;
         cursor: pointer;
 
         &:hover {
@@ -106,6 +105,10 @@
       @media screen and (max-width: 1440px) {
         font-size: 100%;
       }
+    }
+
+    &__item {
+      padding: 10px 0;
     }
 
     &__item.active {
