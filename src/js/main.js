@@ -177,17 +177,6 @@ window.addEventListener("load", function () {
       arrows: false,
     });
 
-    const handleShownGalery = (currentIndex, imagesCount) => {
-      console.log(currentIndex, imagesCount);
-    }
-
-    const galery = baguetteBox.run(".show-in-modal", {
-      buttons: true,
-      onChange: handleShownGalery,
-    });
-
-    console.log(galery);
-
-    baguetteBox.show(index, galery[0]);
+    baguetteBox.run(".show-in-modal")
   }
 });

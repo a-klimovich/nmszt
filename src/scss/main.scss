@@ -1,14 +1,17 @@
-// базовые подключения
+// BASE
+@import "fonts";
 @import "variables";
 @import "mixins";
 @import "settings";
 
 // PAGES
-@import './pages/main';
+@import "./pages/main";
 
-// SLIDER BASE
+// SLIDER
 @import "slick-theme";
+
+// BAGUETBOX
+@import "baguetteBox";
 
 // COMPONENT
 @import "./components/main";
-
