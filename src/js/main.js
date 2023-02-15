@@ -1,5 +1,5 @@
 (function () {
-  // Base
+  // Const
   const cssClassActive = "active";
   const cssClassOpen = "open";
   const cssClassIsHidden = "is-hidden";
@@ -9,6 +9,10 @@
   const $headerNav = $("#headerNav");
   const $burger = $(".burger");
   const $submenuHeaderBtn = $(".submenu-header");
+  const productBigImageSlider = $("#productBigImage");
+  const productSmallImageSlider = $("#productSmallImage");
+  const galeryLightBoxSlider = $(".show-in-modal a");
+  const galleryLightBox = $(".gallery a");
 
   const mainSliederSettings = {
     slidesToShow: 1,
@@ -151,39 +155,31 @@
     $("#logoSlider").slick(logoSliderSettings);
     $("#sliderProduct").slick(sliderProductSettings);
     $("#achivSlider").slick(achivSliderSettings);
+
+    if (productBigImageSlider.length && productSmallImageSlider.length && galeryLightBoxSlider.length) {
+      $("#productBigImage").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: false,
+        asNavFor: "#productSmallImage",
+        arrows: true,
+      });
+      $("#productSmallImage").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: "#productBigImage",
+        dots: false,
+        focusOnSelect: true,
+        arrows: false,
+      });
+
+      const gallery = galeryLightBoxSlider.simpleLightbox({});
+    }
+
+    if (galleryLightBox.length) {
+      const gallery = $('.gallery a').simpleLightbox({});
+    }
   });
 
   $(".pagination .pagination__number.active")?.click((event) => event.preventDefault());
 })();
-
-// PRODUCT ITEM SLIDERs
-window.addEventListener("load", function () {
-  const productBigImageSlider = $("#productBigImage");
-  const productSmallImageSlider = $("#productSmallImage");
-  const galeryLightBoxSlider = $(".show-in-modal a");
-  const galleryLightBox = $(".gallery a");
-
-  if (productBigImageSlider.length && productSmallImageSlider.length && galeryLightBoxSlider.length) {
-    $("#productBigImage").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: false,
-      asNavFor: "#productSmallImage",
-      arrows: true,
-    });
-    $("#productSmallImage").slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: "#productBigImage",
-      dots: false,
-      focusOnSelect: true,
-      arrows: false,
-    });
-
-    const gallery = galeryLightBoxSlider.simpleLightbox({});
-  }
-
-  if (galleryLightBox.length) {
-    const gallery = $('.gallery a').simpleLightbox({});
-  }
-});
