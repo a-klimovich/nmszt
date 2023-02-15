@@ -164,7 +164,7 @@ window.addEventListener("load", function () {
     $("#productBigImage").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      fade: true,
+      fade: false,
       asNavFor: "#productSmallImage",
       arrows: true,
     });
@@ -177,6 +177,17 @@ window.addEventListener("load", function () {
       arrows: false,
     });
 
-    baguetteBox.run(".show-in-modal");
+    const handleShownGalery = (currentIndex, imagesCount) => {
+      console.log(currentIndex, imagesCount);
+    }
+
+    const galery = baguetteBox.run(".show-in-modal", {
+      buttons: true,
+      onChange: handleShownGalery,
+    });
+
+    console.log(galery);
+
+    baguetteBox.show(index, galery[0]);
   }
 });
