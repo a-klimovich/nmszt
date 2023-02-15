@@ -15,6 +15,8 @@
     prevArrow: '<span class="arrow prev"><img src="./assets/arrow.svg" alt=""></span>',
     nextArrow: '<span class="arrow next"><img src="./assets/arrow.svg" alt=""></span>',
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,  
     responsive: [
       {
         breakpoint: 1200,
@@ -156,11 +158,12 @@
 
 // PRODUCT ITEM SLIDERs
 window.addEventListener("load", function () {
-  const productBigImageSlider = $("productBigImage");
-  const productSmallImageSlider = $("productSmallImage");
-  const bugetImageContainer = $(".show-in-modal");
+  const productBigImageSlider = $("#productBigImage");
+  const productSmallImageSlider = $("#productSmallImage");
+  const galeryLightBoxSlider = $(".show-in-modal a");
+  const galleryLightBox = $(".gallery a");
 
-  if (productBigImageSlider && productSmallImageSlider && bugetImageContainer) {
+  if (productBigImageSlider.length && productSmallImageSlider.length && galeryLightBoxSlider.length) {
     $("#productBigImage").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -177,6 +180,10 @@ window.addEventListener("load", function () {
       arrows: false,
     });
 
-    baguetteBox.run(".show-in-modal")
+    const gallery = galeryLightBoxSlider.simpleLightbox({});
+  }
+
+  if (galleryLightBox.length) {
+    const gallery = $('.gallery a').simpleLightbox({});
   }
 });
