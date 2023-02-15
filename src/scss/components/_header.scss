@@ -157,6 +157,10 @@
   .lang-search-wrapper {
     @include flex-all-center;
 
+    .mb-12 {
+      margin-bottom: 12px;
+    }
+
     .header-contacts {
       display: none;
       flex-direction: column;
