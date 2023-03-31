@@ -136,6 +136,7 @@
       $searchInput.toggleClass(cssClassActive);
       $logoImage.toggleClass(cssClassIsHidden);
       $headerNav.toggleClass(cssClassOpen);
+      $('body').toggleClass(cssClassOpen);
     });
 
     const $searchInput = $(".form__label");
@@ -147,7 +148,19 @@
         $headerNav.toggleClass(cssClassOpen);
       }
 
-      $(".mobile-c-l").toggleClass(cssClassActive);
+      $(".mobile-numbers-language").toggleClass(cssClassActive);
+    });
+
+    $('.nav__item .link-box').on('click', function() {
+      $(this).offsetParent().toggleClass(cssClassActive);
+    });
+    $('.nav__item').each(function() {
+      const hasUlInside = $(this).find('ul').length > 0;
+
+      if (!hasUlInside) {
+        $(this).find('.link-box > button').css("display", "none");
+      }
+      console.log(hasUlInside);
     });
 
     // SLIDERS

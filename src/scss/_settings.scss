@@ -22,6 +22,20 @@
   &.scroll {
     padding-top: 70px;
   }
+
+  &.open {
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #bdbdbd8b;
+    }
+  }
 }
 
 .main-wrapper {
