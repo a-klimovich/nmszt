@@ -10,9 +10,10 @@ blockquote {
   transition: 0.2s border ease-in-out;
   margin-bottom: 10px;
   padding-left: calc(($paddingBkLg / 2) + 11px);
-  padding-top: 1rem;
-  padding-bottom: 0.4rem;
-
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 1rem;
+  
   @include xl {
     padding-left: calc($paddingBkLg + 12px);
   }
@@ -44,5 +45,6 @@ blockquote {
     line-height: 16px;
     letter-spacing: -0.02em;
     color: $blue;
+    margin-top: 10px;
   }
 }

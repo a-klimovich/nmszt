@@ -7,13 +7,9 @@
   }
 
   &__list {
-    display: none;
+    display: flex;
     padding: 0.7rem 0;
-    list-style: none;
-
-    @include md {
-      display: flex;
-    }
+    list-style: none; 
   }
 
   &__item {
