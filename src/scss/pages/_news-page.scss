@@ -2,10 +2,7 @@
 .news-page {
   .news {
     position: relative;
-    padding-bottom: 100px;
-    @include md {
-      padding-bottom: 200px;
-    }
+
     &__text {
       color: $gray-2;
       letter-spacing: -0.02em;
@@ -55,8 +52,7 @@
 
   .video-wrapper {
     @include flex-all-center;
-    padding: 50px 0;
-    margin-bottom: 50px;
+    margin: 50px 0;
 
     iframe {
       width: 300px;
