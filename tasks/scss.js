@@ -27,4 +27,15 @@ const scss = () => {
     .pipe(dest(path.scss.build, { sourcemaps: '.' }))
 };
 
-module.exports = scss;
+const vendorsStyles = () => {
+  return src(path.vendorsCSS.src)
+    .pipe(gulpIf(processes.isProd, shorthand()))
+    .pipe(gulpIf(processes.isProd, csso()))
+    .pipe(concat('vendors.css'))
+    .pipe(dest(path.vendorsCSS.build))
+};
+
+module.exports = {
+  scss,
+  vendorsStyles,
+};

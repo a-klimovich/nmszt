@@ -18,7 +18,7 @@ module.exports = {
     watch: pathSrc + '/js/**/*.js',
     build: pathBuild + '/js',
   },
-  img: {
+  images: {
     src: pathSrc + '/assets/**/*.*',
     watch: pathSrc + '/assets/**/*.*',
     build: pathBuild + '/assets',
@@ -28,4 +28,16 @@ module.exports = {
     watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
     build: pathBuild + '/fonts',
   },
+  vendorsJS: {
+    src: pathSrc + '/vendors/**/*.js',
+    build: pathBuild + '/js',
+  },
+  vendorsCSS: {
+    src: pathSrc + '/vendors/**/*.css',
+    build: pathBuild + '/css',
+  },
+  headConnect: {
+    src: pathSrc + '/headConnect/*.js',
+    build: pathBuild + '/js',
+  }
 }

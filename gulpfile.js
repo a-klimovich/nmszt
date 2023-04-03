@@ -6,10 +6,10 @@ const processes = require('./tasks/config/processes');
 // TASKS
 const clear = require('./tasks/clear');
 const html = require('./tasks/html');
-const scss = require('./tasks/scss');
-const script = require('./tasks/script');
-const img = require('./tasks/img');
+const stylesTasks = require('./tasks/scss');
+const scriptTasks = require('./tasks/script');
 const fonts = require('./tasks/fonts');
+const images = require('./tasks/images');
 
 // SERVER
 const server = () => {
@@ -23,15 +23,24 @@ const server = () => {
 // TASK WATCHER
 const watcher = () => {
   watch(path.html.watch, html).on('all', browserSync.reload)
-  watch(path.scss.watch, scss).on('all', browserSync.reload)
-  watch(path.script.watch, script).on('all', browserSync.reload)
-  watch(path.img.watch, img).on('all', browserSync.reload)
+  watch(path.scss.watch, stylesTasks.scss).on('all', browserSync.reload)
+  watch(path.script.watch, scriptTasks.script).on('all', browserSync.reload)
   watch(path.fonts.watch, fonts).on('all', browserSync.reload)
+  watch(path.images.watch, images).on('all', browserSync.reload)
 };
 
 const build = series(
   clear,
-  parallel(html, scss, script, img, fonts),
+  parallel(
+    html,
+    stylesTasks.scss,
+    scriptTasks.script,
+    fonts,
+    images,
+    scriptTasks.headConnect,
+    scriptTasks.vendorsScript,
+    stylesTasks.vendorsStyles
+  ),
 );
 
 const dev = series(
@@ -40,10 +49,10 @@ const dev = series(
 );
 
 exports.html = html;
-exports.scss = scss;
-exports.script = script;
-exports.img = img;
+exports.scss = stylesTasks.scss;
+exports.script = scriptTasks.script;
 exports.fonts = fonts;
+exports.images = images;
 
 exports.default = processes.isProd
   ? build

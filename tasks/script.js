@@ -16,4 +16,22 @@ const script = () => {
     .pipe(dest(path.script.build))
 };
 
-module.exports = script;
+const vendorsScript = () => {
+  return src(path.vendorsJS.src)
+    .pipe(babel())
+    .pipe(concat('vendors.js'))
+    .pipe(gulpIf(processes.isProd, minify()))
+    .pipe(dest(path.vendorsJS.build))
+};
+
+const headConnect = () => {
+  return src(path.headConnect.src)
+    .pipe(gulpIf(processes.isProd, minify()))
+    .pipe(dest(path.headConnect.build))
+};
+
+module.exports = {
+  script,
+  vendorsScript,
+  headConnect
+};

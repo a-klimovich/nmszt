@@ -7,11 +7,11 @@ const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const gulpIf = require('gulp-if');
 
-const img = () => {
-  return src(path.img.src)
-    .pipe(newer(path.img.build))
+const images = () => {
+  return src(path.images.src)
+    .pipe(newer(path.images.build))
     .pipe(gulpIf(processes.isProd, imagemin()))
-    .pipe(dest(path.img.build))
+    .pipe(dest(path.images.build))
 };
 
-module.exports = img;
+module.exports = images;
