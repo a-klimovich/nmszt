@@ -31,21 +31,29 @@
       flex-wrap: wrap;
       margin: 0 -10px;
 
-      &[data-cols='2'] {
-        a {
+      a {
+        padding: 0 10px;
+        margin-bottom: 20px;
+      }
+
+      &[data-cols='2'] a {
+        max-width: 100%;
+
+        @include sm {
           max-width: calc(100% / 2);
         }
       }
 
-      &[data-cols='3'] {
-        a {
+      &[data-cols='3'] a {
+        max-width: 100%;
+
+        @include sm {
+          max-width: calc(100% / 2);
+        }
+
+        @include lg {
           max-width: calc(100% / 3);
         }
-      }
-
-      a {
-        padding: 0 10px;
-        margin-bottom: 20px;
       }
     }
   }
