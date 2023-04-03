@@ -97,21 +97,45 @@
 
   .section-about-company {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 45px;
+    }
+
+    @include lg {
+      grid-template-columns: auto 1fr;
+      grid-template-areas: 
+        'image text'
+        'image link'
+      ;
+      column-gap: 71px;
+    }
 
     &__image {
-      width: 500px;
+      @include lg {
+        grid-area: image;
+      }
     }
 
     &__text {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1 0 50%;
-      margin-left: 70px;
-
-      a {
-        align-self: center;
+      @include lg {
+        grid-area: text;
       }
+    }
+
+    &__link {
+      grid-column: 1 / span 2;
+
+      @include lg {
+        grid-area: link;
+      }
+      display: block;
+      margin: 0 auto;
     }
   }
 

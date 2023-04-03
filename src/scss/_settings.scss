@@ -204,11 +204,13 @@ hr {
 .fluid-wrapper {
   width: 100%;
 
-  .container {
-    padding: 0;
-    
-    @include md {
-      padding: 0 34px;
+  .padding-0 {
+    .container {
+      padding: 0;
+      
+      @include md {
+        padding: 0 34px;
+      }
     }
   }
 }

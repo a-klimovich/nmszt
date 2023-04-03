@@ -30,6 +30,11 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 -10px;
+      justify-content: center;
+
+      @include md {
+        justify-content: flex-start;
+      }
 
       a {
         padding: 0 10px;
