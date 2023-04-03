@@ -9,6 +9,7 @@
   const $headerNav = $("#headerNav");
   const $burger = $(".burger");
   const $submenuHeaderBtn = $(".submenu-header");
+  const $laguageMobileMenu = $(".mobile-numbers-language");
   const productBigImageSlider = $("#productBigImage");
   const productSmallImageSlider = $("#productSmallImage");
   const galeryLightBoxSlider = $(".show-in-modal a");
@@ -130,8 +131,27 @@
       }
     };
 
+    $(document).on('click', function(event) {
+      if (!$(event.target).closest('.nav__item').length) {
+        $('.nav__item').each(function() {
+          $(this).removeClass(cssClassActive);
+        });
+      }
+    });
+
+    $('.overlay').on('click', () => {
+      $burger.removeClass('burger__active');
+      $headerNav.removeClass(cssClassOpen);
+      $laguageMobileMenu.removeClass(cssClassActive);
+      $('body').removeClass(cssClassOpen);
+    })
+
+    const $searchInput = $(".form__label");
+    const $logoImage = $(".logo a");
+
     // Header menu controllers
     $burger.on("click", () => {
+      $laguageMobileMenu.removeClass(cssClassActive);
       $burger.toggleClass("burger__active");
       $searchInput.toggleClass(cssClassActive);
       $logoImage.toggleClass(cssClassIsHidden);
@@ -139,28 +159,32 @@
       $('body').toggleClass(cssClassOpen);
     });
 
-    const $searchInput = $(".form__label");
-    const $logoImage = $(".logo a");
-
     $submenuHeaderBtn.on("click", () => {
       if ($burger.hasClass("burger__active")) {
         $burger.toggleClass("burger__active");
         $headerNav.toggleClass(cssClassOpen);
       }
 
-      $(".mobile-numbers-language").toggleClass(cssClassActive);
+      $laguageMobileMenu.toggleClass(cssClassActive);
     });
 
-    $('.nav__item .link-box').on('click', function() {
-      $(this).offsetParent().toggleClass(cssClassActive);
+    $('.nav__item').on('click', function() {
+      const isActive = $(this).hasClass(cssClassActive);
+      $('.nav__item').removeClass(cssClassActive);
+      if (!isActive) {
+        $(this).addClass(cssClassActive);
+      } else {
+        $(this).find('ul').slideUp();
+      }
     });
+    
+
     $('.nav__item').each(function() {
       const hasUlInside = $(this).find('ul').length > 0;
 
       if (!hasUlInside) {
         $(this).find('.link-box > button').css("display", "none");
       }
-      console.log(hasUlInside);
     });
 
     // SLIDERS
