@@ -21,7 +21,7 @@
     prevArrow: '<span class="arrow prev"><img src="./assets/arrow.svg" alt=""></span>',
     nextArrow: '<span class="arrow next"><img src="./assets/arrow.svg" alt=""></span>',
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {
