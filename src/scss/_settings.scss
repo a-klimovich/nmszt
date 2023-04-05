@@ -29,6 +29,10 @@
     .overlay {
       display: block;
     }
+
+    .header {
+      position: fixed;
+    }
   }
 }
 
@@ -76,7 +80,8 @@ a {
   }
 }
 
-a.btn-default, button.btn-default {
+a.btn-default,
+button.btn-default {
   color: $blue;
   border-color: $blue;
   background-color: $white;
@@ -97,7 +102,7 @@ ul {
     position: relative;
     margin-bottom: 30px;
 
-    &::before{
+    &::before {
       content: url('../assets/svg/list-decore.svg');
       position: absolute;
       top: 3px;
@@ -168,6 +173,7 @@ hr {
   li {
     padding-left: inherit;
     margin-bottom: inherit;
+
     &:before {
       display: none;
     }
@@ -207,7 +213,7 @@ hr {
   .padding-0 {
     .container {
       padding: 0;
-      
+
       @include md {
         padding: 0 34px;
       }
@@ -231,7 +237,7 @@ hr {
   @include lg {
     max-width: 1280px;
   }
-  
+
   &.container--xl {
     @include xl {
       max-width: 1570px;
@@ -268,6 +274,7 @@ hr {
 .color-white {
   color: $white;
 }
+
 .color-blue {
   color: $blue;
 }
@@ -277,19 +284,26 @@ hr {
   .mt-#{$i} {
     margin-top: calc(#{$i} * 10px);
   }
+
   .mb-#{$i} {
     margin-bottom: calc(#{$i} * 10px);
   }
+
   .pt-#{$i} {
     padding-top: calc(#{$i} * 10px);
   }
+
   .pb-#{$i} {
     padding-bottom: calc(#{$i} * 10px);
   }
 }
 
 @for $i from 1 through 5 {
-  .z-#{$i} {z-index: #{$i}};
+  .z-#{$i} {
+    z-index: #{$i}
+  }
+
+  ;
 }
 
 .m-0 {
@@ -303,16 +317,16 @@ hr {
 .layout {
   display: flex;
   flex-direction: column-reverse;
-  
+
   &__content {
     display: flex;
     flex-direction: column;
     margin-right: 0;
-    
+
     @media screen and (min-width: 1200px) {
       margin-right: calc(5vw - 1rem);
     }
-    
+
     @include xl {
       margin-right: 90px;
     }
@@ -341,7 +355,7 @@ hr {
 
 .bottom-space-5 {
   margin-bottom: 25px;
-  
+
   @include md {
     margin-bottom: 50px;
   }

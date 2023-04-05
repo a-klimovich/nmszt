@@ -1,5 +1,5 @@
 (function () {
-  $('.lazy').lazy();
+  $(".lazy").lazy();
   // Const
   const cssClassActive = "active";
   const cssClassOpen = "open";
@@ -141,9 +141,11 @@
     });
 
     $(".overlay").on("click", () => {
-      $burger.removeClass("burger__active");
-      $headerNav.removeClass(cssClassOpen);
       $laguageMobileMenu.removeClass(cssClassActive);
+      $burger.removeClass("burger__active");
+      $searchInput.removeClass(cssClassActive);
+      $logoImage.removeClass(cssClassIsHidden);
+      $headerNav.removeClass(cssClassOpen);
       $("body").removeClass(cssClassOpen);
     });
 
