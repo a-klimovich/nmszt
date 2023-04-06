@@ -1,119 +1,99 @@
 .product-item-page {
+  .product-item-title {
+    color: $blue;
+    margin: 1rem 0;
+    margin-top: 0;
+    display: none;
+    
+    @include lg {
+      display: block;
+    }
+
+    &.show-mobile {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+
+      @include lg {
+        display: none;
+      }
+    }
+  }
+
   .product-item-info-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: minmax(auto, 100%);
+    align-items: center;
     margin-bottom: 35px;
+    gap: 30px;
+
+    @include lg {
+      grid-template-columns: minmax(auto, 500px) 1fr;
+    }
 
     @include xl {
-      flex-direction: row;
-      flex-wrap: nowrap;
+      gap: 45px;
     }
 
     .product-image-slider {
-      position: relative;
-      max-width: 300px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
 
-      @include md {
-        max-width: 500px;
+      @include lg {
+        gap: 30px;
+        align-items: initial;
+      }
+    }
+
+    #productBigImage {
+      min-height: 300px;
+      max-height: 500px;
+      cursor: pointer;
+    }
+
+    #productSmallImage {
+      align-self: baseline;
+
+      @include sm {
+        align-self: inherit;
       }
 
-      #productBigImage {
-        margin-bottom: 20px;
-        height: 300px;
+      .slick-track {
+        margin: 0 -7px;
 
-        @include md {
-          height: 500px;
-        }
-
-        .slide .video {
-          @include flex-all-center;
-          background: $gray-6;
-
-          video {
-            width: 100%;
-          }
-
-          height: 300px;
-
-          @include md {
-            height: 500px;
-          }
-        }
-      }
-
-      #productSmallImage {
-        .slick-slide.slick-active.slick-current {
-          .slide {
-            border: 3px solid $blue;
-          }
-        }
-
-        .slide {
-          @include flex-all-center;
-          overflow: hidden;
-          border: 3px solid transparent;
-          cursor: pointer;
-          max-width: 112px;
-
-          img {
-            width: 100%;
-            object-fit: cover;
-          }
-        }
-
-        /* the slides */
         .slick-slide {
-          margin: 0 8px;
+          padding: 0 7px;
         }
+      }
+      
+      .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
 
-        /* the parent */
-        .slick-list {
-          margin: 0 -8px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
+      }
+    }    
 
-        .slide.video {
-          position: relative;
+    #productBigImage,
+    #productSmallImage {
+      width: 100%;
+      max-width: 500px;
 
-          &::before {
-            content: "";
-            width: 40%;
-            height: 40%;
-            border-radius: 50%;
-            background-color: $blue;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-20%, -50%);
-
-            border: 10px solid transparent;
-            border-left: 16px solid $white;
-            z-index: 2;
-          }
-        }
+      @include lg {
+        width: auto;
+        max-width: 100%;
       }
     }
 
     .product-item-table {
-      // flex: 1 0 auto;
-
-      .product-item-title {
-        color: $blue;
-        margin: 1rem 0;
-        margin-top: 0;
-      }
-
       .table {
         display: flex;
         flex-direction: column;
@@ -249,8 +229,8 @@
       font-weight: 700;
       font-size: 14px;
       line-height: 17px;
-      color: $gray-5;
-      border: 2px solid $gray-5;
+      color: $blue;
+      border: 2px solid $blue;
       padding: 1rem 2rem;
       align-self: center;
       border-radius: 5px;
@@ -292,6 +272,7 @@
 
       &.next {
         text-align: right;
+
         span {
           left: auto;
           right: 0;

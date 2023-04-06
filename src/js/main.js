@@ -84,6 +84,7 @@
         settings: {
           slidesToScroll: 2,
           slidesToShow: 2,
+          arrows: false,
         },
       },
       {
@@ -91,6 +92,7 @@
         settings: {
           slidesToScroll: 2,
           slidesToShow: 2,
+          arrows: false,
         },
       },
     ],
@@ -108,6 +110,7 @@
         settings: {
           slidesToScroll: 2,
           slidesToShow: 2,
+          arrows: false,
         },
       },
       {
@@ -115,6 +118,7 @@
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],

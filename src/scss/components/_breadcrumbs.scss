@@ -1,50 +1,51 @@
 .breadcrumbs {
   min-height: 8px;
   border-bottom: solid 4px $gray-4-1;
-  
+
   a {
-    color: $gray-2;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: $blue;
+
+    @include hover {
+      color: $brown;
+    }
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     padding: 0.7rem 0;
-    list-style: none; 
-  }
+    list-style: none;
 
-  &__item {
-    @include pr(25px);
-    position: relative;
+    .breadcrumbs__item:first-child {
+      padding-left: 0;
 
-    a {
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 16px;
-      color: $blue;
-
-      @include hover {
-        color: $brown;
+      &::after {
+        display: none;
       }
     }
 
-    .seporator {
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: $blue;
-      right: 10px;
-      top: 50%;
-      transform: translate(0, -40%);
-    }
-  }
-
-  &__item.current {
-    a {
+    .breadcrumbs__item:last-child a {
       color: $brown;
     }
-    .seporator {
-      display: none;
+
+    .breadcrumbs__item {
+      position: relative;
+      padding-left: 25px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $blue;
+        left: 0.6rem;
+        top: 50%;
+        transform: translate(0, -40%);
+      }
     }
   }
 }
